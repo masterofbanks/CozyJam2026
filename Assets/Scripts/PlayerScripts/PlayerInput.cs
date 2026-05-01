@@ -18,10 +18,13 @@ public class PlayerInput : MonoBehaviour
 
     private bool _isMoving = false;
 
+    [Header("Interactables")]
+    [SerializeField] private Interactable CurrentInteractable;
 
 
     //input fields
     public InputSystem_Actions ISAs;
+    private InputAction _interact;
     private InputAction _moveInput;
     private Vector2 _directionalInput;
 
@@ -91,14 +94,42 @@ public class PlayerInput : MonoBehaviour
         _isMoving = rb2D.linearVelocity.sqrMagnitude > 0.01f;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("InteractableArea"))
+        {
+            CurrentInteractable = collision.gameObject.GetComponent<Interactable>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("InteractableArea"))
+        {
+            CurrentInteractable = null;
+        }
+    }
+
     private void OnEnable()
     {
         _moveInput = ISAs.Player.Move;
         _moveInput.Enable();
+
+        _interact = ISAs.Player.Interact;
+        _interact.Enable();
+        _interact.performed += PerformInteract;
     }
 
     private void OnDisable()
     {
         _moveInput.Disable();
+    }
+
+    private void PerformInteract(InputAction.CallbackContext context)
+    {
+        if(CurrentInteractable != null)
+        {
+            CurrentInteractable.Interact();
+        }
     }
 }
