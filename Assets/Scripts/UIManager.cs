@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     [Header("UI Components")]
     [SerializeField] private GameObject FaderImage;
     [SerializeField] private GameObject DefaultMinigameUI;
+    public GameObject CurrentMinigameUI;
 
     [Header("Cameras")]
     [SerializeField] private GameObject CatCam;
@@ -54,9 +55,12 @@ public class UIManager : MonoBehaviour
         otherCam.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         RemoveBlackFromScreen();
-        GameManager.Instance.BringOutOfMinigame();
+        CurrentMinigameUI?.SetActive(false);
+        CurrentMinigameUI = null;
         yield return new WaitForSeconds(1.0f);
         FaderImage.SetActive(false);
+        GameManager.Instance.BringOutOfMinigame();
+
 
     }
 

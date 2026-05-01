@@ -133,8 +133,9 @@ public class PlayerInput : MonoBehaviour
 
     private void PerformInteract(InputAction.CallbackContext context)
     {
-        if(CurrentInteractable != null)
+        if(CurrentInteractable != null && !GameManager.Instance.InMinigame)
         {
+            rb2D.linearVelocity = Vector2.zero;
             CurrentInteractable.Interact();
         }
     }

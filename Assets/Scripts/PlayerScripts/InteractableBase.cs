@@ -12,6 +12,9 @@ public abstract class MinigameInteractable : Interactable
     [SerializeField] private float CameraDelay = 1.0f;
     [SerializeField] private GameObject GameCamera;
     [SerializeField] private GameObject MinigameCamera;
+
+    [Header("UI")]
+    [SerializeField] protected GameObject UI;
     private void OpenCamera()
     {
         GameCamera.SetActive(false);
@@ -27,6 +30,8 @@ public abstract class MinigameInteractable : Interactable
     public virtual void SetupMinigameLogic()
     {
         UIManager.Instance.ToggleDefaultMinigameUI();
+        UI?.SetActive(true);
+        UIManager.Instance.CurrentMinigameUI = UI;
     }
     public override void Interact()
     {
