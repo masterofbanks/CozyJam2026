@@ -14,17 +14,23 @@ public abstract class MinigameInteractable : Interactable
     [SerializeField] private GameObject MinigameCamera;
     private void OpenCamera()
     {
-
+        GameCamera.SetActive(false);
+        MinigameCamera.SetActive(true);
+        UIManager.Instance.RemoveBlackFromScreen();
     }
 
     private void CloseCamera()
     {
-
+        UIManager.Instance.AddBlackToScreen();
     }
 
-    public abstract void SetupMinigameLogic();
+    public virtual void SetupMinigameLogic()
+    {
+        UIManager.Instance.ToggleDefaultMinigameUI();
+    }
     public override void Interact()
     {
+        GameManager.Instance.PushIntoMinigame();
         StartCoroutine(InteractSequence());
     }
 
@@ -35,6 +41,8 @@ public abstract class MinigameInteractable : Interactable
         SetupMinigameLogic();
         yield return new WaitForSeconds(CameraDelay);
         OpenCamera();
+        yield return new WaitForSeconds(CameraDelay);
+        UIManager.Instance.RemoveFader();
     }
 }
 

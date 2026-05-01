@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class MixingMinigameInteractable : MinigameInteractable
+public class CoffeeInteractable : MinigameInteractable
 {
     public override void SetupMinigameLogic()
     {
         base.SetupMinigameLogic();
-        Debug.Log("Setting up Mixing Minigame");
+        Debug.Log("Setting up Coffee Minigame");
+
     }
 }
-

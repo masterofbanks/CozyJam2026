@@ -51,16 +51,22 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        _animCat.SendAnimationInformation(CurrentDirection, _isMoving);
+
     }
 
 
     private void MovePlayer()
     {
-        _directionalInput = _moveInput.ReadValue<Vector2>().normalized;
-        UpdateDirectionState(_directionalInput);
-        UpdateIsMoving();
-        rb2D.linearVelocity = _directionalInput * moveSpeed;
-        _animCat.SendAnimationInformation(CurrentDirection, _isMoving);
+        if (!GameManager.Instance.InMinigame)
+        {
+            _directionalInput = _moveInput.ReadValue<Vector2>().normalized;
+            UpdateDirectionState(_directionalInput);
+            UpdateIsMoving();
+            rb2D.linearVelocity = _directionalInput * moveSpeed;
+        }
+
+
     }
 
     private void UpdateDirectionState(Vector2 dir)
