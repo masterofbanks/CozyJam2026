@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MixingMinigameInteractable : MinigameInteractable
+public class ServingInteractable : MinigameInteractable
 {
     public override void SetupMinigameLogic()
     {
@@ -10,11 +10,10 @@ public class MixingMinigameInteractable : MinigameInteractable
 
     public override void Interact()
     {
-        if (!GameManager.Instance.TrayInHand && !GameManager.Instance.TrayIsCooked)
+        if (GameManager.Instance.TrayInHand && GameManager.Instance.TrayIsCooked)
         {
             GameManager.Instance.PushIntoMinigame();
             StartCoroutine(InteractSequence());
         }
     }
 }
-

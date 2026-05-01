@@ -35,11 +35,11 @@ public abstract class MinigameInteractable : Interactable
     }
     public override void Interact()
     {
-        GameManager.Instance.PushIntoMinigame();
-        StartCoroutine(InteractSequence());
+        
+        
     }
 
-    private IEnumerator InteractSequence()
+    protected IEnumerator InteractSequence()
     {
         CloseCamera();
         yield return new WaitForSeconds(CameraDelay);

@@ -4,10 +4,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public bool InMinigame {get; private set;}
-    public bool TrayInHand { get; private set; }
 
     [Header("Mixing/Baking")]
     public string[] RecipesInTray;
+    public bool TrayIsCooked; //{ get; private set; }
+    public bool TrayInHand; //{ get; private set; }
+
     [SerializeField] private GameObject TraySprite;
 
     private void Awake()
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         RecipesInTray = new string[4];
+        TrayIsCooked = false;
     }
 
     
@@ -39,6 +42,12 @@ public class GameManager : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public void ThrowTrayInOven()
+    {
+        TrayInHand = false;
+        TraySprite.SetActive(false);
     }
     public void PushIntoMinigame()
     {
