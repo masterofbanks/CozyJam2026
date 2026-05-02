@@ -16,9 +16,13 @@ public class GameManager : MonoBehaviour
     public bool PlateInHand { get; private set; }
     public string OrderInHand;
 
+    [Header("Player Sprites")]
     [SerializeField] private GameObject TraySprite;
     [SerializeField] private GameObject DrinksSprite;
     [SerializeField] private GameObject PlateSprite;
+
+    [Header("Customer Management")]
+    public bool CustomerAtOrderArea { get; private set; } = false;
 
     private void Awake()
     {
@@ -119,6 +123,11 @@ public class GameManager : MonoBehaviour
     public void ChangeNumberOfDrinks(int newNumberOfDrinks)
     {
         DrinksContents = new Tuple<Dictionary<string, int>, int>(DrinksContents.Item1, newNumberOfDrinks);
+    }
+
+    public void OrderSequence()
+    {
+        CustomerAtOrderArea = true;
     }
 
 
