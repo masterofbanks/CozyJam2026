@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
         Left
     }
 
-    public Directions CurrentDirection { get; private set; }
+    public Directions CurrentDirection { get; set; }
 
     [Header("Physics Values")]
     [SerializeField] private float moveSpeed = 5f;
@@ -61,7 +61,7 @@ public class PlayerInput : MonoBehaviour
         if (!GameManager.Instance.InMinigame)
         {
             _directionalInput = _moveInput.ReadValue<Vector2>().normalized;
-            UpdateDirectionState(_directionalInput);
+            CurrentDirection = _animCat.UpdateDirectionState(_directionalInput);
             UpdateIsMoving();
             rb2D.linearVelocity = _directionalInput * moveSpeed;
         }
@@ -69,31 +69,7 @@ public class PlayerInput : MonoBehaviour
 
     }
 
-    private void UpdateDirectionState(Vector2 dir)
-    {
-        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
-        {
-            if (dir.x < 0)
-            {
-                CurrentDirection = Directions.Left;
-            }
-            else
-            {
-                CurrentDirection = Directions.Right;
-            }
-        }
-        else
-        {
-            if (dir.y > 0)
-            {
-                CurrentDirection = Directions.Up;
-            }
-            else
-            {
-                CurrentDirection = Directions.Down;
-            }
-        }
-    }
+    
 
     private void UpdateIsMoving()
     {

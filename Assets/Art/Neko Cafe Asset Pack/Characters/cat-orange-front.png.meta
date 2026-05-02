@@ -122,7 +122,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 15
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -143,10 +143,10 @@ TextureImporter:
       name: cat-orange-front_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 16
+        y: 16
         width: 16
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +165,10 @@ TextureImporter:
       name: cat-orange-front_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 15
+        x: 32
+        y: 16
         width: 16
-        height: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,7 +187,7 @@ TextureImporter:
       name: cat-orange-front_3
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
         width: 16
         height: 16
@@ -209,10 +209,10 @@ TextureImporter:
       name: cat-orange-front_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 15
+        x: 16
+        y: 0
         width: 16
-        height: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,7 +234,7 @@ TextureImporter:
         x: 32
         y: 0
         width: 16
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
