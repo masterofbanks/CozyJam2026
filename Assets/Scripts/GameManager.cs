@@ -125,9 +125,14 @@ public class GameManager : MonoBehaviour
         DrinksContents = new Tuple<Dictionary<string, int>, int>(DrinksContents.Item1, newNumberOfDrinks);
     }
 
-    public void OrderSequence()
+    public void BeginOrderSequence()
     {
         CustomerAtOrderArea = true;
+    }
+
+    public void EndOrderSequence()
+    {
+        CustomerAtOrderArea = false;
     }
 
 

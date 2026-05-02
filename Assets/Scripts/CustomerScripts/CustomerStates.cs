@@ -25,8 +25,42 @@ public class CustomerStartState : I_CustomerState
         else
         {
             behaviorScript.AimCustomerAtTransform(CustomerManager.Instance.OrderingArea);
-            GameManager.Instance.OrderSequence();
+            GameManager.Instance.BeginOrderSequence();
         }
+    }
+
+    public void Update()
+    {
+        behaviorScript.MoveTheCustomerNormally();
+        if (behaviorScript.InOrderArea && !behaviorScript.FinishedOrdering)
+        {
+            CustomerManager.Instance.SetCurrentCustomer(behaviorScript);
+        }
+        else if (behaviorScript.FinishedOrdering)
+        {
+            behaviorScript.stateMachine.TransitionTo(behaviorScript.stateMachine.WaitingForFoodState);
+        }
+    }
+
+    public void Exit()
+    {
+
+    }
+
+}
+
+public class WaitForFoodState : I_CustomerState
+{
+    private CustomerBehavior behaviorScript;
+    public WaitForFoodState(CustomerBehavior behaviorScript)
+    {
+        this.behaviorScript = behaviorScript;
+    }
+
+    public void Enter()
+    {
+        behaviorScript.AimCustomerAtTransform(CustomerManager.Instance.WaitForFoodArea);
+        GameManager.Instance.EndOrderSequence();
     }
 
     public void Update()
@@ -38,9 +72,6 @@ public class CustomerStartState : I_CustomerState
     {
 
     }
-
-
-
 }
 
 

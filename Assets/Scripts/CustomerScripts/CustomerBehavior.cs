@@ -15,6 +15,8 @@ public class CustomerBehavior : MonoBehaviour
     public CustomerStateMachine stateMachine;
 
     private bool isMoving;
+    public bool InOrderArea { get; private set; }
+    public bool FinishedOrdering { get; private set; }
 
     private void Awake()
     {
@@ -37,6 +39,9 @@ public class CustomerBehavior : MonoBehaviour
     void Update()
     {
         stateMachine.Update();
+        CurrentDirection = animCatScript.UpdateDirectionState(agent.velocity);
+        UpdateIsMoving();
+        animCatScript.SendAnimationInformation(CurrentDirection, isMoving);
     }
 
     private void UpdateIsMoving()
@@ -47,9 +52,7 @@ public class CustomerBehavior : MonoBehaviour
     public void MoveTheCustomerNormally()
     {
         agent.SetDestination(Target.position);
-        CurrentDirection = animCatScript.UpdateDirectionState(agent.velocity);
-        UpdateIsMoving();
-        animCatScript.SendAnimationInformation(CurrentDirection, isMoving);
+        
     }
 
     public void AimCustomerAtTransform(Transform t)
@@ -57,5 +60,27 @@ public class CustomerBehavior : MonoBehaviour
         Target = t;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("OrderingArea"))
+        {
+            Debug.Log($"{gameObject.name} has hit the ordering area!");
+            InOrderArea = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("OrderingArea"))
+        {
+            Debug.Log($"{gameObject.name} has left the ordering area!");
+            InOrderArea = false;
+        }
+    }
+
+    public void TakeOrder()
+    {
+        FinishedOrdering = true;
+    }
 
 }

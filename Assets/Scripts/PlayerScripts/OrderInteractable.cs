@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class OrderInteractable : MinigameInteractable
+public class OrderInteractable : Interactable
 {
-    public override void SetupMinigameLogic()
+    public override void Interact()
     {
-        base.SetupMinigameLogic();
-        Debug.Log("Setting up Ordering Minigame");
+        CustomerManager.Instance.TakeCustomerOrder();
     }
 }
