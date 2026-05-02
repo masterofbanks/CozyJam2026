@@ -4,16 +4,14 @@ public class ServingInteractable : MinigameInteractable
 {
     public override void SetupMinigameLogic()
     {
-        base.SetupMinigameLogic();
+        UI?.SetActive(true);
+        UIManager.Instance.CurrentMinigameUI = UI;
         Debug.Log("Setting up Mixing Minigame");
     }
 
     public override void Interact()
     {
-        if (GameManager.Instance.TrayInHand && GameManager.Instance.TrayIsCooked)
-        {
-            GameManager.Instance.PushIntoMinigame();
-            StartCoroutine(InteractSequence());
-        }
+        GameManager.Instance.PushIntoMinigame();
+        StartCoroutine(InteractSequence());
     }
 }

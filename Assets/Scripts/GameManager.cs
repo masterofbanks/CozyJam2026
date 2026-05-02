@@ -8,13 +8,17 @@ public class GameManager : MonoBehaviour
 
     [Header("Mixing/Baking")]
     public string[] RecipesInTray;
-    public Tuple<Dictionary<string, int>, int> DrinksContents;
+    public Tuple<Dictionary<string, int>, int> DrinksContents = new(new(), 0);
+    public string DrinkType;
     public bool TrayIsCooked; //{ get; private set; }
     public bool TrayInHand; //{ get; private set; }
     public bool DrinksInHand;
+    public bool PlateInHand { get; private set; }
+    public string OrderInHand;
 
     [SerializeField] private GameObject TraySprite;
     [SerializeField] private GameObject DrinksSprite;
+    [SerializeField] private GameObject PlateSprite;
 
     private void Awake()
     {
@@ -36,11 +40,11 @@ public class GameManager : MonoBehaviour
 
     
 
-    public bool TrayIsEmpty(string[] arr)
+    public bool TrayIsEmpty()
     {
-        foreach(string s in arr)
+        foreach(string s in RecipesInTray)
         {
-            if(s != "")
+            if(!string.IsNullOrEmpty(s))
             {
                 return false;
             }
@@ -66,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     public void PutTrayInHand()
     {
-        if (!TrayIsEmpty(RecipesInTray))
+        if (!TrayIsEmpty())
         {
             TrayInHand = true;
             TraySprite.SetActive(TrayInHand);
@@ -83,6 +87,38 @@ public class GameManager : MonoBehaviour
     {
         DrinksInHand = true;
         DrinksSprite.SetActive(DrinksInHand);
+    }
+
+    public void PutPlateInHand(string finalOrder)
+    {
+        PlateInHand = true;
+        PlateSprite.SetActive(PlateInHand);
+        OrderInHand = finalOrder;
+        /*if (TrayIsEmpty())
+        {
+            TraySprite.SetActive(false);
+            TrayIsCooked = false;
+            TrayInHand = false;
+        }
+
+        if(DrinksContents.Item2 == 0)
+        {
+            DrinkType = null;
+            DrinksInHand = false;
+            DrinksSprite.SetActive(false);
+        }*/
+    }
+
+    public void CleanOutPlateInHand()
+    {
+        PlateInHand = false;
+        PlateSprite.SetActive(PlateInHand);
+        OrderInHand = null;
+    }
+
+    public void ChangeNumberOfDrinks(int newNumberOfDrinks)
+    {
+        DrinksContents = new Tuple<Dictionary<string, int>, int>(DrinksContents.Item1, newNumberOfDrinks);
     }
 
 

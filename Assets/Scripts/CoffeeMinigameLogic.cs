@@ -65,6 +65,8 @@ public class CoffeeMinigameLogic : MonoBehaviour
             Destroy(_listOfIngredientGameObjects[i]);
         }
         _listOfIngredientGameObjects.Clear();
+        
+
 
     }
 
@@ -103,6 +105,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
         BrewState = BrewStates.Brewed;
         Instantiate(FinishedSFX);
         coffeePotSource.Stop();
+        _t = 0;
 
     }
 
@@ -172,6 +175,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
                 copyOfCurrentContents.Add(pair.Key, pair.Value);
             }
             GameManager.Instance.DrinksContents = new Tuple<Dictionary<string, int>, int>(copyOfCurrentContents, _cupsOfWater);
+            GameManager.Instance.DrinkType = CoffeeType.ToString();
             BrewState = BrewStates.NotBrewing;
             GameManager.Instance.PutDrinksInHand();
             UIManager.Instance.SendBackToCatCamera(thisCam);
