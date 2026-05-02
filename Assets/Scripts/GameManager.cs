@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -7,10 +8,13 @@ public class GameManager : MonoBehaviour
 
     [Header("Mixing/Baking")]
     public string[] RecipesInTray;
+    public Tuple<Dictionary<string, int>, int> DrinksContents;
     public bool TrayIsCooked; //{ get; private set; }
     public bool TrayInHand; //{ get; private set; }
+    public bool DrinksInHand;
 
     [SerializeField] private GameObject TraySprite;
+    [SerializeField] private GameObject DrinksSprite;
 
     private void Awake()
     {
@@ -74,4 +78,14 @@ public class GameManager : MonoBehaviour
         }
         
     }
+
+    public void PutDrinksInHand()
+    {
+        DrinksInHand = true;
+        DrinksSprite.SetActive(DrinksInHand);
+    }
+
+
+
+
 }

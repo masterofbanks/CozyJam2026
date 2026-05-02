@@ -11,7 +11,7 @@ public class CoffeeInteractable : MinigameInteractable
 
     public override void Interact()
     {
-        if (!GameManager.Instance.TrayInHand)
+        if (!GameManager.Instance.DrinksInHand)
         {
             GameManager.Instance.PushIntoMinigame();
             StartCoroutine(InteractSequence());

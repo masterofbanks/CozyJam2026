@@ -10,7 +10,7 @@ public class BakingInteractable : Interactable
 
     public override void Interact()
     {
-        if (GameManager.Instance.TrayInHand)
+        if (GameManager.Instance.TrayInHand && !GameManager.Instance.TrayIsCooked)
         {
             GameManager.Instance.ThrowTrayInOven();
             TrayInOven = true;
