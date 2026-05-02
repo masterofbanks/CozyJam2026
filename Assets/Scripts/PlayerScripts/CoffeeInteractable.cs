@@ -8,4 +8,13 @@ public class CoffeeInteractable : MinigameInteractable
         Debug.Log("Setting up Coffee Minigame");
 
     }
+
+    public override void Interact()
+    {
+        if (!GameManager.Instance.TrayInHand)
+        {
+            GameManager.Instance.PushIntoMinigame();
+            StartCoroutine(InteractSequence());
+        }
+    }
 }
