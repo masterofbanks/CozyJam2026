@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,6 +12,8 @@ public class CustomerBehavior : MonoBehaviour
 
     [Header("Ordering")]
     public string Order;//{ get; private set; }
+    public int ID = -1;
+    public TextMeshProUGUI IDText;
 
 
     private NavMeshAgent agent;
@@ -28,6 +31,7 @@ public class CustomerBehavior : MonoBehaviour
         anime = GetComponent<Animator>();
         animCatScript = new AnimateCat(anime);
         stateMachine = new CustomerStateMachine(this);
+        IDText = GetComponentInChildren<TextMeshProUGUI>();
     }
 
 
@@ -97,9 +101,11 @@ public class CustomerBehavior : MonoBehaviour
         FinishedOrdering = true;
     }
 
-    public void GiveOrder(string order)
+    public void GiveOrder(string order, int id)
     {
         Order = order;
+        ID = id;
+        IDText.text = id.ToString();
     }
 
 }

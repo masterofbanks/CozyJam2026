@@ -11,6 +11,7 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private Transform Seats;
     private SeatBehavior[] _seatScripts;
     private int _currentFreeSeatIndex = 0;
+    private int numCustomers = 0;
 
     [Header("Customer Data")]
     [SerializeField] private GameObject CustomerPrefab;
@@ -58,6 +59,7 @@ public class CustomerManager : MonoBehaviour
         if(CurrentCustomer != null)
         {
             CurrentCustomer.TakeOrder();
+            UIManager.Instance.AddOrderToUI(CurrentCustomer.Order, CurrentCustomer.ID);
             CurrentCustomer = null;
             CustomersInLine.Dequeue();
             if (CustomersInLine.Count >= 1)
@@ -78,7 +80,8 @@ public class CustomerManager : MonoBehaviour
     public void SpawnCustomer()
     {
         GameObject customerClone = Instantiate(CustomerPrefab, CustomerSpawnPos.position, Quaternion.identity);
-        customerClone.GetComponent<CustomerBehavior>().GiveOrder(CreateCustomerOrder());
+        numCustomers++;
+        customerClone.GetComponent<CustomerBehavior>().GiveOrder(CreateCustomerOrder(), numCustomers);
         CustomersInLine.Enqueue(customerClone.GetComponent<CustomerBehavior>());
         Debug.Log(CustomersInLine.Count);
 
@@ -102,7 +105,7 @@ public class CustomerManager : MonoBehaviour
     public string CreateCustomerOrder()
     {
         int randIndex = _random.Next(0, CoffeeOrderTypes.Count);
-        CoffeeOrder order = new CoffeeOrder();
+        CoffeeOrder order = (CoffeeOrder)ScriptableObject.CreateInstance("CoffeeOrder");
         order.Type = CoffeeOrderTypes[randIndex].Type;
         bool hasMilk = _random.NextDouble() > 0.5;
         if (hasMilk)
