@@ -15,9 +15,12 @@ public class CustomerBehavior : MonoBehaviour
     public string Order;//{ get; private set; }
     public int ID = -1;
     public TextMeshProUGUI IDText;
+
+    [Header("Rating System")]
     public int MaxHappinessRating = 80;
     public int MinHappyRating = 60;
     public int MinMediocreRating = 30;
+    public float DecreaseScaling = 0.0001f;
     public float CurrentRating; 
 
 
@@ -136,8 +139,7 @@ public class CustomerBehavior : MonoBehaviour
         Debug.Log(distanceBetweenServedAndActual);
         CurrentRating -= distanceBetweenServedAndActual;
         UIManager.Instance.RemoveOrderSlip(ID);
-        GameManager.Instance.CleanOutPlateInHand();
-        GameManager.Instance.CleanUpAfterServing();
+        GameManager.Instance.GiveFood(CurrentRating);
 
     }
 }

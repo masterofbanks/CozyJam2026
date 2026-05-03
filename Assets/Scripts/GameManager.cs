@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject PlateSprite;
 
     [Header("Customer Management")]
+    public float TotalCustomerScore = 0;
     public bool CustomerAtOrderArea { get; private set; } = false;
 
     public event Action ServedOrderDrinksAction;
@@ -139,7 +140,30 @@ public class GameManager : MonoBehaviour
         CustomerAtOrderArea = false;
     }
 
+    public void ClearTrayArray()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            RecipesInTray[i] = null;
+        }
+    }
+
+    public void ClearDrinksOut()
+    {
+        DrinksContents = new(new(), 0);
+    }
+
     public void CleanUpAfterServing()
+    {
+        ClearFoodValues();
+        ClearDrinkValues();
+
+        
+
+        ServedOrderAction?.Invoke();
+    }
+
+    public void ClearFoodValues()
     {
         if (TrayIsEmpty())
         {
@@ -148,7 +172,10 @@ public class GameManager : MonoBehaviour
             TrayInHand = false;
             ServedOrderFoodAction?.Invoke();
         }
+    }
 
+    public void ClearDrinkValues()
+    {
         if (DrinksContents.Item2 == 0)
         {
             DrinkType = null;
@@ -157,8 +184,13 @@ public class GameManager : MonoBehaviour
             ServedOrderDrinksAction?.Invoke();
 
         }
+    }
 
-        ServedOrderAction?.Invoke();
+    public void GiveFood(float score)
+    {
+        CleanOutPlateInHand();
+        CleanUpAfterServing();
+        GameManager.Instance.TotalCustomerScore += score;
     }
 
 

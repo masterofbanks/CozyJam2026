@@ -354,6 +354,11 @@ MonoBehaviour:
   Order: 
   ID: -1
   IDText: {fileID: 0}
+  MaxHappinessRating: 80
+  MinHappyRating: 60
+  MinMediocreRating: 30
+  DecreaseScaling: 0.05
+  CurrentRating: 0
   AreaAnimator: {fileID: 1800270734374932643}
 --- !u!195 &2406963884926960913
 NavMeshAgent:
