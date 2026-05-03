@@ -1,10 +1,21 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public bool InMinigame {get; private set;}
+
+    [Header("Wave Settings")]
+    [SerializeField] private Wave CurrentWave;
+    [SerializeField] private int CurrentIndexOfWave = 0;
+    public int NumCustomersServed = 0;
+    private float _t;
 
     [Header("Mixing/Baking")]
     public string[] RecipesInTray;
@@ -24,10 +35,14 @@ public class GameManager : MonoBehaviour
     [Header("Customer Management")]
     public float TotalCustomerScore = 0;
     public bool CustomerAtOrderArea { get; private set; } = false;
+    public bool CustomersAreFrozen = false;
+    public FullScreenPassRendererFeature DitherShader;
 
     public event Action ServedOrderDrinksAction;
     public event Action ServedOrderFoodAction;
     public event Action ServedOrderAction;
+    public event Action FreezeCustomers;
+    public event Action UnfreezeCustomers;
 
     private void Awake()
     {
@@ -47,7 +62,20 @@ public class GameManager : MonoBehaviour
         TrayIsCooked = false;
     }
 
-    
+    private void Update()
+    {
+        if (CurrentIndexOfWave < CurrentWave.waves.Count)
+        {
+            _t += Time.deltaTime;
+            if (_t > CurrentWave.waves[CurrentIndexOfWave])
+            {
+                CurrentIndexOfWave++;
+                CustomerManager.Instance.SpawnCustomer();
+            }
+        }
+        
+    }
+
 
     public bool TrayIsEmpty()
     {
@@ -103,19 +131,7 @@ public class GameManager : MonoBehaviour
         PlateInHand = true;
         PlateSprite.SetActive(PlateInHand);
         OrderInHand = finalOrder;
-        /*if (TrayIsEmpty())
-        {
-            TraySprite.SetActive(false);
-            TrayIsCooked = false;
-            TrayInHand = false;
-        }
-
-        if(DrinksContents.Item2 == 0)
-        {
-            DrinkType = null;
-            DrinksInHand = false;
-            DrinksSprite.SetActive(false);
-        }*/
+        
     }
 
     public void CleanOutPlateInHand()
@@ -191,6 +207,43 @@ public class GameManager : MonoBehaviour
         CleanOutPlateInHand();
         CleanUpAfterServing();
         GameManager.Instance.TotalCustomerScore += score;
+        NumCustomersServed++;
+    }
+
+    public bool AllCustomersServed()
+    {
+        return NumCustomersServed >= CurrentWave.waves.Count;
+    }
+
+    public void LoadNextLevel()
+    {
+        if (AllCustomersServed())
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+        }
+    }
+
+    IEnumerator LoadLevel(int level)
+    {
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene(level);
+    }
+
+    public void MakeCustomersFrozen()
+    {
+        if (!CustomersAreFrozen)
+        {
+            FreezeCustomers?.Invoke();
+        }
+
+        else
+        {
+            UnfreezeCustomers?.Invoke();
+        }
+        DitherShader.SetActive(!CustomersAreFrozen);
+        CustomersAreFrozen = !CustomersAreFrozen;
+
+
     }
 
 

@@ -1,4 +1,5 @@
 using Algorithms;
+using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -36,6 +37,8 @@ public class CustomerBehavior : MonoBehaviour
     public bool FinishedOrdering { get; private set; }
     public bool HasFood { get; private set; }
 
+    private bool oldUpdatePosition = true;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -43,6 +46,8 @@ public class CustomerBehavior : MonoBehaviour
         animCatScript = new AnimateCat(anime);
         stateMachine = new CustomerStateMachine(this);
         IDText = GetComponentInChildren<TextMeshProUGUI>();
+        GameManager.Instance.FreezeCustomers += FreezeCustomer;
+        GameManager.Instance.UnfreezeCustomers += UnfreezeCustomer;
     }
 
 
@@ -63,6 +68,7 @@ public class CustomerBehavior : MonoBehaviour
         UpdateIsMoving();
         animCatScript.SendAnimationInformation(CurrentDirection, isMoving);
         MoodAnimator.SetFloat("Rating", CurrentRating);
+
     }
 
     private void UpdateIsMoving()
@@ -72,8 +78,12 @@ public class CustomerBehavior : MonoBehaviour
 
     public void MoveTheCustomerNormally()
     {
-        agent.SetDestination(Target.position);
-        
+        if (agent.enabled)
+        {
+            agent.SetDestination(Target.position);
+
+        }
+
     }
 
     public void AimCustomerAtTransform(Transform t)
@@ -101,6 +111,7 @@ public class CustomerBehavior : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("LeavingArea"))
         {
+            GameManager.Instance.LoadNextLevel();
             Destroy(gameObject);
         }
     }
@@ -143,5 +154,18 @@ public class CustomerBehavior : MonoBehaviour
         UIManager.Instance.RemoveOrderSlip(ID);
         GameManager.Instance.GiveFood(CurrentRating);
 
+    }
+
+    private void FreezeCustomer()
+    {
+        oldUpdatePosition = agent.updatePosition;
+        agent.updatePosition = false;
+        agent.enabled = false;  
+    }
+
+    private void UnfreezeCustomer()
+    {
+        agent.updatePosition = oldUpdatePosition;
+        agent.enabled = true;
     }
 }
