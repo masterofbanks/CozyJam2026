@@ -19,6 +19,7 @@ public class CustomerBehavior : MonoBehaviour
     private NavMeshAgent agent;
     private Animator anime;
     private AnimateCat animCatScript;
+    public Animator AreaAnimator;
     public CustomerStateMachine stateMachine;
 
     private bool isMoving;
@@ -108,4 +109,11 @@ public class CustomerBehavior : MonoBehaviour
         IDText.text = id.ToString();
     }
 
+    public void InProximityOfSittingCustomer()
+    {
+        if(!agent.updatePosition)
+        {
+            AreaAnimator.Play("InArea");
+        }
+    }
 }

@@ -82,6 +82,12 @@ public class PlayerInput : MonoBehaviour
         {
             CurrentInteractable = collision.gameObject.GetComponent<Interactable>();
         }
+
+        else if (collision.gameObject.CompareTag("CustomerArea"))
+        {
+            Debug.Log(collision.gameObject.name);
+            collision.GetComponentInParent<CustomerBehavior>().InProximityOfSittingCustomer();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -89,6 +95,13 @@ public class PlayerInput : MonoBehaviour
         if (collision.gameObject.CompareTag("InteractableArea"))
         {
             CurrentInteractable = null;
+        }
+
+        else if (collision.gameObject.CompareTag("CustomerArea"))
+        {
+            Debug.Log(collision.gameObject.name);
+            collision.GetComponent<Animator>().Play("OutOfArea");
+
         }
     }
 
