@@ -11781,6 +11781,17 @@ MonoBehaviour:
   Seats: {fileID: 205135768}
   CustomerPrefab: {fileID: 4774361157023306099, guid: cce9edd70cb8d2b4ca0881d6b5e600db, type: 3}
   CustomerSpawnPos: {fileID: 816437910}
+  CoffeeOrderTypes:
+  - {fileID: 11400000, guid: db8e15f58be307c44b2c504edd382d8b, type: 2}
+  - {fileID: 11400000, guid: 53b4a6f4d5eae1141941ecc62e0e90d9, type: 2}
+  - {fileID: 11400000, guid: 403840784899ca745850613d8eba0418, type: 2}
+  - {fileID: 11400000, guid: 6fea7f7525a346f409081e86a6633450, type: 2}
+  FoodOrderTypes:
+  - {fileID: 11400000, guid: 0175a9ca09560b742891afbbd1a2544c, type: 2}
+  - {fileID: 11400000, guid: 18e7d8fbb800a3b4b93cc84819104de8, type: 2}
+  - {fileID: 11400000, guid: 2086b4aee5425e5419a76819d17a1d17, type: 2}
+  - {fileID: 11400000, guid: 0de4879061f450143b5526188c887e3c, type: 2}
+  - {fileID: 11400000, guid: 07aea474b3f351644a31840152d49a58, type: 2}
   CurrentCustomer: {fileID: 0}
 --- !u!1 &874224959
 GameObject:

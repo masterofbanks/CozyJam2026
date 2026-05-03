@@ -9,6 +9,10 @@ public class CustomerBehavior : MonoBehaviour
     public SeatBehavior Seat;
     public PlayerInput.Directions CurrentDirection = PlayerInput.Directions.Down;
 
+    [Header("Ordering")]
+    public string Order;//{ get; private set; }
+
+
     private NavMeshAgent agent;
     private Animator anime;
     private AnimateCat animCatScript;
@@ -91,6 +95,11 @@ public class CustomerBehavior : MonoBehaviour
     public void TakeOrder()
     {
         FinishedOrdering = true;
+    }
+
+    public void GiveOrder(string order)
+    {
+        Order = order;
     }
 
 }

@@ -16,8 +16,11 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private GameObject CustomerPrefab;
     [SerializeField] private Transform CustomerSpawnPos;
     [SerializeField] private Queue<CustomerBehavior> CustomersInLine = new();
+    [SerializeField] private List<CoffeeOrder> CoffeeOrderTypes = new();
+    [SerializeField] private List<Recipe> FoodOrderTypes = new();
     public CustomerBehavior CurrentCustomer = null;
 
+    private System.Random _random = new System.Random();    
     private void Awake()
     {
         if(Instance == null)
@@ -31,6 +34,7 @@ public class CustomerManager : MonoBehaviour
         }
 
         _seatScripts = Seats.gameObject.GetComponentsInChildren<SeatBehavior>();
+        _random = new System.Random();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,6 +78,7 @@ public class CustomerManager : MonoBehaviour
     public void SpawnCustomer()
     {
         GameObject customerClone = Instantiate(CustomerPrefab, CustomerSpawnPos.position, Quaternion.identity);
+        customerClone.GetComponent<CustomerBehavior>().GiveOrder(CreateCustomerOrder());
         CustomersInLine.Enqueue(customerClone.GetComponent<CustomerBehavior>());
         Debug.Log(CustomersInLine.Count);
 
@@ -92,5 +97,26 @@ public class CustomerManager : MonoBehaviour
 
         return null;
 
+    }
+
+    public string CreateCustomerOrder()
+    {
+        int randIndex = _random.Next(0, CoffeeOrderTypes.Count);
+        CoffeeOrder order = new CoffeeOrder();
+        order.Type = CoffeeOrderTypes[randIndex].Type;
+        bool hasMilk = _random.NextDouble() > 0.5;
+        if (hasMilk)
+        {
+            order.NumMilk = 1;
+        }
+        bool hasSugar = _random.NextDouble() > 0.5;
+        if(hasSugar)
+        {
+            order.NumSugar = 1;
+        }
+        string drinksOrder = order.ToString();
+        randIndex = _random.Next(0, FoodOrderTypes.Count);
+        string finalOrder = drinksOrder + $"-{FoodOrderTypes[randIndex].name}";
+        return finalOrder;
     }
 }
