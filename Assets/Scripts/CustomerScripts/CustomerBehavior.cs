@@ -28,6 +28,7 @@ public class CustomerBehavior : MonoBehaviour
     private Animator anime;
     private AnimateCat animCatScript;
     public Animator AreaAnimator;
+    public Animator MoodAnimator;
     public CustomerStateMachine stateMachine;
 
     private bool isMoving;
@@ -61,6 +62,7 @@ public class CustomerBehavior : MonoBehaviour
         CurrentDirection = animCatScript.UpdateDirectionState(agent.velocity);
         UpdateIsMoving();
         animCatScript.SendAnimationInformation(CurrentDirection, isMoving);
+        MoodAnimator.SetFloat("Rating", CurrentRating);
     }
 
     private void UpdateIsMoving()
