@@ -1,3 +1,4 @@
+using Algorithms;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -123,8 +124,10 @@ public class CustomerBehavior : MonoBehaviour
         }
     }
 
-    public void GiveFood(string order)
+    public void GiveFood(string servedOrder)
     {
         HasFood = true;
+        int distanceBetweenServedAndActual = LevenshteinDistance.Calculate(servedOrder, Order);
+        Debug.Log(distanceBetweenServedAndActual);
     }
 }

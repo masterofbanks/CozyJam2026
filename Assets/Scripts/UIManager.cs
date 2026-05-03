@@ -112,7 +112,7 @@ public class UIManager : MonoBehaviour
         int indexOfLastX = order.LastIndexOf('x');
         string sugarNumAsString = order.Substring(indexOfLastX + 1, 1);
         int sugarNum = -1;
-        if (!Int32.TryParse(milkNumAsString, out sugarNum))
+        if (!Int32.TryParse(sugarNumAsString, out sugarNum))
         {
             Debug.Log($"Could not convert {sugarNumAsString} to an integer");
         }
