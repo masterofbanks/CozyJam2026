@@ -72,6 +72,10 @@ public class WaitForFoodState : I_CustomerState
     public void Update()
     {
         behaviorScript.MoveTheCustomerNormally();
+        if (behaviorScript.HasFood)
+        {
+            behaviorScript.stateMachine.TransitionTo(behaviorScript.stateMachine.LeavingState);
+        }
     }
 
     public void Exit()
@@ -79,5 +83,32 @@ public class WaitForFoodState : I_CustomerState
 
     }
 }
+
+public class LeavingState : I_CustomerState
+{
+    private CustomerBehavior behaviorScript;
+    public LeavingState(CustomerBehavior behaviorScript)
+    {
+        this.behaviorScript = behaviorScript;
+    }
+
+    public void Enter()
+    {
+        behaviorScript.agent.updatePosition = true;
+        behaviorScript.AimCustomerAtTransform(CustomerManager.Instance.LeavingArea);
+    }
+
+    public void Update()
+    {
+        behaviorScript.MoveTheCustomerNormally();
+        
+    }
+
+    public void Exit()
+    {
+
+    }
+}
+
 
 

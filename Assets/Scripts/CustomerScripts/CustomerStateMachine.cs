@@ -12,6 +12,7 @@ public class CustomerStateMachine
     // reference to the state objects
     public CustomerStartState StartState { get; private set; } 
     public WaitForFoodState WaitingForFoodState { get; private set; }
+    public LeavingState LeavingState { get; private set; }
 
 
     // event to notify other objects of the state change
@@ -24,6 +25,7 @@ public class CustomerStateMachine
         // create an instance for each state and pass in PlayerController
         this.StartState = new CustomerStartState(customer);
         this.WaitingForFoodState = new WaitForFoodState(customer);
+        this.LeavingState = new LeavingState(customer); 
     }
 
 

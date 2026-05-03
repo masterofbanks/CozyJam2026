@@ -8,6 +8,7 @@ public class CustomerManager : MonoBehaviour
     [Header("Waiting Areas")]
     public Transform WaitingArea;
     public Transform OrderingArea;
+    public Transform LeavingArea;
     [SerializeField] private Transform Seats;
     private SeatBehavior[] _seatScripts;
     private int _currentFreeSeatIndex = 0;

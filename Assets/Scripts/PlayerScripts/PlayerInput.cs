@@ -87,6 +87,7 @@ public class PlayerInput : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name);
             collision.GetComponentInParent<CustomerBehavior>().InProximityOfSittingCustomer();
+            CurrentInteractable = collision.gameObject.GetComponent<GiveOrderInteractable>();
         }
     }
 
@@ -101,6 +102,7 @@ public class PlayerInput : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name);
             collision.GetComponent<Animator>().Play("OutOfArea");
+            CurrentInteractable = null;
 
         }
     }

@@ -16,7 +16,7 @@ public class CustomerBehavior : MonoBehaviour
     public TextMeshProUGUI IDText;
 
 
-    private NavMeshAgent agent;
+    public NavMeshAgent agent { get; private set; }
     private Animator anime;
     private AnimateCat animCatScript;
     public Animator AreaAnimator;
@@ -25,6 +25,7 @@ public class CustomerBehavior : MonoBehaviour
     private bool isMoving;
     public bool InOrderArea { get; private set; }
     public bool FinishedOrdering { get; private set; }
+    public bool HasFood { get; private set; }
 
     private void Awake()
     {
@@ -86,6 +87,11 @@ public class CustomerBehavior : MonoBehaviour
                 agent.updatePosition = false;
             }
         }
+
+        else if (collision.gameObject.CompareTag("LeavingArea"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -115,5 +121,10 @@ public class CustomerBehavior : MonoBehaviour
         {
             AreaAnimator.Play("InArea");
         }
+    }
+
+    public void GiveFood(string order)
+    {
+        HasFood = true;
     }
 }
