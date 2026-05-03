@@ -15,6 +15,10 @@ public class CustomerBehavior : MonoBehaviour
     public string Order;//{ get; private set; }
     public int ID = -1;
     public TextMeshProUGUI IDText;
+    public int MaxHappinessRating = 80;
+    public int MinHappyRating = 60;
+    public int MinMediocreRating = 30;
+    public float CurrentRating; 
 
 
     public NavMeshAgent agent { get; private set; }
@@ -44,6 +48,7 @@ public class CustomerBehavior : MonoBehaviour
         stateMachine.Initialize(stateMachine.StartState);
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        CurrentRating = MaxHappinessRating;
     }
 
     // Update is called once per frame
@@ -129,5 +134,10 @@ public class CustomerBehavior : MonoBehaviour
         HasFood = true;
         int distanceBetweenServedAndActual = LevenshteinDistance.Calculate(servedOrder, Order);
         Debug.Log(distanceBetweenServedAndActual);
+        CurrentRating -= distanceBetweenServedAndActual;
+        UIManager.Instance.RemoveOrderSlip(ID);
+        GameManager.Instance.CleanOutPlateInHand();
+        GameManager.Instance.CleanUpAfterServing();
+
     }
 }

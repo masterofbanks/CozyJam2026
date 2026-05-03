@@ -16,7 +16,12 @@ public class MixingMinigameLogic : MonoBehaviour
     private Dictionary<string, int> _currentItemRecipe;
     private List<GameObject> _currentIngredientList;
     private Dictionary<string,Dictionary<string, int>> _allRecipes;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
+    private void Awake()
+    {
+        GameManager.Instance.ServedOrderFoodAction += CleanUpStation;
+    }
     void Start()
     {
         _currentItemRecipe = new Dictionary<string, int>();
@@ -187,5 +192,11 @@ public class MixingMinigameLogic : MonoBehaviour
     public void MoveToOven()
     {
         GameManager.Instance.PutTrayInHand();
+    }
+
+    public void CleanUpStation()
+    {
+        ClearCurrentRecipe();
+        ClearTray();
     }
 }

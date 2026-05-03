@@ -21,9 +21,16 @@ public class ServingMinigameLogic : MonoBehaviour
 
     private int numberOfDrinks;
     private Dictionary<string, int> contentsOfDrink;
+
+    private void Awake()
+    {
+        GameManager.Instance.ServedOrderAction += ClearStuffs;
+        GameManager.Instance.ServedOrderDrinksAction += ClearDrinks;
+        GameManager.Instance.ServedOrderFoodAction += ClearTrayButtons;
+
+    }
     private void Start()
     {
-
     }
     private void OnEnable()
     {
@@ -169,9 +176,25 @@ public class ServingMinigameLogic : MonoBehaviour
 
     }
 
-    public void ClearFoods()
+    public void ClearStuffs()
     {
+        Debug.Log("Trying to clear stuff within serving minigame logic");
+        FoodButton.gameObject.SetActive(false);
+        DrinksButton.gameObject.SetActive(false);
+    }
 
+    public void ClearDrinks()
+    {
+        contentsOfDrink.Clear();
+        CoffeeContentsText.text = "";
+    }
+
+    public void ClearTrayButtons()
+    {
+        for (int i = 0; i < TrayButtons.Count; i++)
+        {
+            TrayButtons[i].gameObject.SetActive(false);
+        }
     }
 
 }

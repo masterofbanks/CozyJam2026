@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     [Header("Customer Management")]
     public bool CustomerAtOrderArea { get; private set; } = false;
 
+    public event Action ServedOrderDrinksAction;
+    public event Action ServedOrderFoodAction;
+    public event Action ServedOrderAction;
+
     private void Awake()
     {
         if (Instance == null)
@@ -135,7 +139,27 @@ public class GameManager : MonoBehaviour
         CustomerAtOrderArea = false;
     }
 
+    public void CleanUpAfterServing()
+    {
+        if (TrayIsEmpty())
+        {
+            TraySprite.SetActive(false);
+            TrayIsCooked = false;
+            TrayInHand = false;
+            ServedOrderFoodAction?.Invoke();
+        }
 
+        if (DrinksContents.Item2 == 0)
+        {
+            DrinkType = null;
+            DrinksInHand = false;
+            DrinksSprite.SetActive(false);
+            ServedOrderDrinksAction?.Invoke();
+
+        }
+
+        ServedOrderAction?.Invoke();
+    }
 
 
 }

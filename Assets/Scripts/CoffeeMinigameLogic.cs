@@ -46,6 +46,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
         _currentContents = new Dictionary<string, int>();
         _currentContents.Add("Milk", 0);
         _currentContents.Add("Sugar", 0);
+        GameManager.Instance.ServedOrderDrinksAction += CleanUpSection;
         
     }
 
@@ -181,5 +182,10 @@ public class CoffeeMinigameLogic : MonoBehaviour
             UIManager.Instance.SendBackToCatCamera(thisCam);
             UIManager.Instance.ToggleDefaultMinigameUI();
         }
+    }
+
+    private void CleanUpSection()
+    {
+        ClearContents();
     }
 }

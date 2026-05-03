@@ -1,6 +1,7 @@
 using NUnit.Framework.Constraints;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -17,6 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Transform SlipParent;
     public GameObject CurrentMinigameUI;
     private bool _orderingUIIsUp = false;
+    public Dictionary<int, GameObject> MapOfOrders = new();
 
     [Header("Cameras")]
     [SerializeField] private GameObject CatCam;
@@ -139,6 +141,23 @@ public class UIManager : MonoBehaviour
         }
 
         slip.GetComponentInChildren<TextMeshProUGUI>().text = pretty;
+        MapOfOrders.Add(id, slip);
+    }
+
+    public void RemoveOrderSlip(int id)
+    {
+        if (MapOfOrders.ContainsKey(id))
+        {
+            GameObject slip = MapOfOrders[id];
+            Destroy(slip);
+            MapOfOrders.Remove(id);
+        }
+
+        else
+        {
+            Debug.Log($"COULD NOT FIND ORDER WITH ID {id}");
+        }
+        
     }
 
     
