@@ -59,7 +59,13 @@ public class WaitForFoodState : I_CustomerState
 
     public void Enter()
     {
-        behaviorScript.AimCustomerAtTransform(CustomerManager.Instance.WaitForFoodArea);
+        SeatBehavior newPosition = CustomerManager.Instance.GetPositionOfFreeSeat();
+        if(newPosition == null)
+        {
+            return;
+        }
+        behaviorScript.AimCustomerAtTransform(newPosition.transform);
+        behaviorScript.Seat = newPosition;
         GameManager.Instance.EndOrderSequence();
     }
 

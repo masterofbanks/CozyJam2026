@@ -8,7 +8,9 @@ public class CustomerManager : MonoBehaviour
     [Header("Waiting Areas")]
     public Transform WaitingArea;
     public Transform OrderingArea;
-    public Transform WaitForFoodArea;
+    [SerializeField] private Transform Seats;
+    private SeatBehavior[] _seatScripts;
+    private int _currentFreeSeatIndex = 0;
 
     [Header("Customer Data")]
     [SerializeField] private GameObject CustomerPrefab;
@@ -28,6 +30,7 @@ public class CustomerManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        _seatScripts = Seats.gameObject.GetComponentsInChildren<SeatBehavior>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -73,6 +76,21 @@ public class CustomerManager : MonoBehaviour
         GameObject customerClone = Instantiate(CustomerPrefab, CustomerSpawnPos.position, Quaternion.identity);
         CustomersInLine.Enqueue(customerClone.GetComponent<CustomerBehavior>());
         Debug.Log(CustomersInLine.Count);
+
+    }
+
+    public SeatBehavior GetPositionOfFreeSeat()
+    {
+        for(int i = 0; i < _seatScripts.Length; i++)
+        {
+            if (!_seatScripts[i].Occupied)
+            {
+                _seatScripts[i].OccupySeat();
+                return _seatScripts[i];
+            }
+        }
+
+        return null;
 
     }
 }

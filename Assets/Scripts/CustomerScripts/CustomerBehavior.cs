@@ -6,7 +6,7 @@ public class CustomerBehavior : MonoBehaviour
 {
     [Header("Targeting")]
     public Transform Target;
-    
+    public SeatBehavior Seat;
     public PlayerInput.Directions CurrentDirection = PlayerInput.Directions.Down;
 
     private NavMeshAgent agent;
@@ -66,6 +66,16 @@ public class CustomerBehavior : MonoBehaviour
         {
             Debug.Log($"{gameObject.name} has hit the ordering area!");
             InOrderArea = true;
+        }
+
+        else if (collision.gameObject.CompareTag("Seats"))
+        {
+            SeatBehavior otherSeat = collision.gameObject.GetComponent<SeatBehavior>();
+            if(otherSeat == Seat)
+            {
+                transform.position = otherSeat.transform.position;
+                agent.updatePosition = false;
+            }
         }
     }
 
