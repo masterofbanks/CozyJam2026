@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Wave CurrentWave;
     [SerializeField] private int CurrentIndexOfWave = 0;
     public int NumCustomersServed = 0;
+    public string NextLevelName;
     private float _t;
 
     [Header("Mixing/Baking")]
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour
     public bool CustomerAtOrderArea { get; private set; } = false;
     public bool CustomersAreFrozen = false;
     public FullScreenPassRendererFeature DitherShader;
+    public SoundManager TutorialNoises;
+    public bool FirstCustomerServed = false;
 
     public event Action ServedOrderDrinksAction;
     public event Action ServedOrderFoodAction;
@@ -60,6 +63,18 @@ public class GameManager : MonoBehaviour
     {
         RecipesInTray = new string[4];
         TrayIsCooked = false;
+        if(TutorialNoises != null)
+        {
+            Debug.Log("Hello from intro sound!");
+            StartCoroutine(SmallDelay());
+        }
+    }
+
+    IEnumerator SmallDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SoundManager.PlaySound(SoundType.Intro);
+
     }
 
     private void Update()
@@ -153,7 +168,7 @@ public class GameManager : MonoBehaviour
 
     public void EndOrderSequence()
     {
-        CustomerAtOrderArea = false;
+        CustomerAtOrderArea = CustomerManager.Instance.TestForCustomersInLine();
     }
 
     public void ClearTrayArray()
@@ -208,6 +223,15 @@ public class GameManager : MonoBehaviour
         CleanUpAfterServing();
         GameManager.Instance.TotalCustomerScore += score;
         NumCustomersServed++;
+        if (!FirstCustomerServed)
+        {
+            if(TutorialNoises != null)
+            {
+                SoundManager.PlaySound(SoundType.Extra);
+            }
+            FirstCustomerServed = true;
+
+        }
     }
 
     public bool AllCustomersServed()
@@ -219,15 +243,12 @@ public class GameManager : MonoBehaviour
     {
         if (AllCustomersServed())
         {
-            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+            float score = TotalCustomerScore * 100f / (CurrentWave.waves.Count * 80f);
+            StartCoroutine(UIManager.Instance.LoadLevel(NextLevelName, score));
         }
     }
 
-    IEnumerator LoadLevel(int level)
-    {
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene(level);
-    }
+    
 
     public void MakeCustomersFrozen()
     {

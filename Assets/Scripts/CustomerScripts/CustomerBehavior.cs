@@ -168,4 +168,10 @@ public class CustomerBehavior : MonoBehaviour
         agent.updatePosition = oldUpdatePosition;
         agent.enabled = true;
     }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.FreezeCustomers -= FreezeCustomer;
+        GameManager.Instance.UnfreezeCustomers -= UnfreezeCustomer;
+    }
 }

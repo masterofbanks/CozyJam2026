@@ -13,5 +13,7 @@ public class ServingInteractable : MinigameInteractable
     {
         GameManager.Instance.PushIntoMinigame();
         StartCoroutine(InteractSequence());
+        if (GameManager.Instance.TutorialNoises != null)
+            SoundManager.PlaySound(SoundType.Serving);
     }
 }

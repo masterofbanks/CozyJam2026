@@ -16,5 +16,8 @@ public class CoffeeInteractable : MinigameInteractable
             GameManager.Instance.PushIntoMinigame();
             StartCoroutine(InteractSequence());
         }
+
+        if (GameManager.Instance.TutorialNoises != null)
+            SoundManager.PlaySound(SoundType.Drinks);
     }
 }

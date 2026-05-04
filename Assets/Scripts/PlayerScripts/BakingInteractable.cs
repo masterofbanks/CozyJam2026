@@ -23,6 +23,12 @@ public class BakingInteractable : Interactable
             GameManager.Instance.PutTrayInHand();
             GameManager.Instance.TrayIsCooked = true;
         }
+
+        if(GameManager.Instance.TutorialNoises != null)
+        {
+            SoundManager.PlaySound(SoundType.Oven);
+
+        }
     }
 
     private void Update()

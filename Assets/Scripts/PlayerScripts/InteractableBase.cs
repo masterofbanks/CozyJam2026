@@ -19,12 +19,12 @@ public abstract class MinigameInteractable : Interactable
     {
         GameCamera.SetActive(false);
         MinigameCamera.SetActive(true);
-        UIManager.Instance.RemoveBlackFromScreen();
+        UIManager.Instance.RemoveBlackFromScreen(UIManager.Instance.FaderImage.GetComponent<Animator>());
     }
 
     private void CloseCamera()
     {
-        UIManager.Instance.AddBlackToScreen();
+        UIManager.Instance.AddBlackToScreen(UIManager.Instance.FaderImage.GetComponent<Animator>());
     }
 
     public virtual void SetupMinigameLogic()

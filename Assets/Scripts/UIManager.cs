@@ -5,18 +5,24 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
     [Header("UI Components")]
-    [SerializeField] private GameObject FaderImage;
+    [SerializeField] public GameObject FaderImage;
     [SerializeField] private GameObject DefaultMinigameUI;
     [SerializeField] private Animator OrderAnimController;
     [SerializeField] private GameObject OrderSlipPrefab;
     [SerializeField] private Transform SlipParent;
     public GameObject CurrentMinigameUI;
+    //
+    [Header("Final UI Componets")]
+    [SerializeField] private GameObject FinalFaderImage;
+    [SerializeField] private GameObject FinalBacgkroundImage;
+    [SerializeField] private TextMeshProUGUI FinalScoreText;
     private bool _orderingUIIsUp = false;
     public Dictionary<int, GameObject> MapOfOrders = new();
 
@@ -35,15 +41,15 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void AddBlackToScreen()
+    public void AddBlackToScreen(Animator anime)
     {
         FaderImage.SetActive(true);
-        FaderImage.GetComponent<Animator>().Play("MakeBlack");
+        anime.Play("MakeBlack");
     }
 
-    public void RemoveBlackFromScreen()
+    public void RemoveBlackFromScreen(Animator anime)
     {
-        FaderImage.GetComponent<Animator>().Play("RemoveBlack");
+        anime.Play("RemoveBlack");
     }
 
     public void ToggleDefaultMinigameUI()
@@ -58,12 +64,12 @@ public class UIManager : MonoBehaviour
 
     IEnumerator BringBackToNormalCamSequence(GameObject otherCam)
     {
-        AddBlackToScreen();
+        AddBlackToScreen(FaderImage.GetComponent<Animator>());
         yield return new WaitForSeconds(1.0f);
         CatCam.SetActive(true);
         otherCam.SetActive(false);
         yield return new WaitForSeconds(0.5f);
-        RemoveBlackFromScreen();
+        RemoveBlackFromScreen(FaderImage.GetComponent<Animator>());
         CurrentMinigameUI?.SetActive(false);
         CurrentMinigameUI = null;
         yield return new WaitForSeconds(1.0f);
@@ -160,5 +166,20 @@ public class UIManager : MonoBehaviour
         
     }
 
-    
+    public IEnumerator LoadLevel(string name, float scoreAsPercent)
+    {
+        FinalFaderImage.SetActive(true);
+        AddBlackToScreen(FinalFaderImage.GetComponent<Animator>());
+        yield return new WaitForSeconds(1.0f);
+        FinalBacgkroundImage.SetActive(true);
+        FinalScoreText.enabled = true;
+        FinalScoreText.text = $"You got a {(int)scoreAsPercent}% on the day!";
+        RemoveBlackFromScreen(FinalFaderImage.GetComponent<Animator>());
+        yield return new WaitForSeconds(3.0f);
+        AddBlackToScreen(FinalFaderImage.GetComponent<Animator>());
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene(name);
+    }
+
+
 }

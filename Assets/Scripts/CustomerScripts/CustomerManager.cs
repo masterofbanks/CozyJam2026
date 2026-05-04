@@ -11,7 +11,6 @@ public class CustomerManager : MonoBehaviour
     public Transform LeavingArea;
     [SerializeField] private Transform Seats;
     private SeatBehavior[] _seatScripts;
-    private int _currentFreeSeatIndex = 0;
     private int numCustomers = 0;
 
     [Header("Customer Data")]
@@ -122,5 +121,10 @@ public class CustomerManager : MonoBehaviour
         randIndex = _random.Next(0, FoodOrderTypes.Count);
         string finalOrder = drinksOrder + $"-{FoodOrderTypes[randIndex].name}";
         return finalOrder;
+    }
+
+    public bool TestForCustomersInLine()
+    {
+        return CustomersInLine.Count > 0;
     }
 }
