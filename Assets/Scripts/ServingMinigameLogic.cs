@@ -160,7 +160,11 @@ public class ServingMinigameLogic : MonoBehaviour
             finalOrder = $"{currentDrink}-{currentFood}";
             GameManager.Instance.PutPlateInHand(finalOrder);
             if (GameManager.Instance.TutorialNoises != null)
-                SoundManager.PlaySound(SoundType.Walking);
+            {
+                if (!GameManager.Instance.FirstCustomerServed)
+                    SoundManager.PlaySound(SoundType.Walking);
+            }
+                
             //DrinksButton.gameObject.SetActive(false);
             //FoodButton.gameObject.SetActive(false);
             

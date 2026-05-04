@@ -15,7 +15,11 @@ public class MixingMinigameInteractable : MinigameInteractable
             GameManager.Instance.PushIntoMinigame();
             StartCoroutine(InteractSequence());
             if (GameManager.Instance.TutorialNoises != null)
-                SoundManager.PlaySound(SoundType.Mixing, 1.0f);
+            {
+                if (!GameManager.Instance.FirstCustomerServed)
+                    SoundManager.PlaySound(SoundType.Mixing);
+            }
+                
         }
     }
 }

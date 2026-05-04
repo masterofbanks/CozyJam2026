@@ -6592,10 +6592,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2abf877b0b8df4885ea9f419a5afc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentWave: {fileID: 11400000, guid: eadf21392b45c5643be4c0b5ab01ad10, type: 2}
+  CurrentWave: {fileID: 0}
   CurrentIndexOfWave: 0
+  AllWaves:
+  - {fileID: 11400000, guid: eadf21392b45c5643be4c0b5ab01ad10, type: 2}
+  - {fileID: 11400000, guid: 5573e25e3fa54504ea85d8d0d5aa71e5, type: 2}
+  - {fileID: 11400000, guid: 1d0b35f77c646904ca95ce4666e19cc8, type: 2}
+  - {fileID: 11400000, guid: 973c8de7064432e458a21200be78aaa9, type: 2}
+  - {fileID: 11400000, guid: 270cf693f8cc93c479955ca304acbdd2, type: 2}
+  - {fileID: 11400000, guid: fe8efc14fcb736946bea243f3d40d7d0, type: 2}
+  ActiveWaveIndex: 0
   NumCustomersServed: 0
-  NextLevelName: EndScreen
   RecipesInTray: []
   DrinkType: 
   TrayIsCooked: 0

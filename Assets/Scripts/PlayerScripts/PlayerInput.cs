@@ -120,6 +120,7 @@ public class PlayerInput : MonoBehaviour
     private void OnDisable()
     {
         _moveInput.Disable();
+        _interact.Disable();
     }
 
     private void PerformInteract(InputAction.CallbackContext context)

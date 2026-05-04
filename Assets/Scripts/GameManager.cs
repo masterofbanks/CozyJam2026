@@ -14,8 +14,9 @@ public class GameManager : MonoBehaviour
     [Header("Wave Settings")]
     [SerializeField] private Wave CurrentWave;
     [SerializeField] private int CurrentIndexOfWave = 0;
+    [SerializeField] private List<Wave> AllWaves;
+    [SerializeField] private int ActiveWaveIndex = 0;
     public int NumCustomersServed = 0;
-    public string NextLevelName;
     private float _t;
 
     [Header("Mixing/Baking")]
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
     public event Action ServedOrderAction;
     public event Action FreezeCustomers;
     public event Action UnfreezeCustomers;
+    public event Action StartedNewLevel;
 
     private void Awake()
     {
@@ -57,6 +59,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        CurrentIndexOfWave = 0;
+        ActiveWaveIndex = 0;
+        SetWave(ActiveWaveIndex);
     }
 
     private void Start()
@@ -73,7 +78,8 @@ public class GameManager : MonoBehaviour
     IEnumerator SmallDelay()
     {
         yield return new WaitForSeconds(0.5f);
-        SoundManager.PlaySound(SoundType.Intro);
+        if (!FirstCustomerServed)
+            SoundManager.PlaySound(SoundType.Intro);
 
     }
 
@@ -244,11 +250,41 @@ public class GameManager : MonoBehaviour
         if (AllCustomersServed())
         {
             float score = TotalCustomerScore * 100f / (CurrentWave.waves.Count * 80f);
-            StartCoroutine(UIManager.Instance.LoadLevel(NextLevelName, score));
+            StartCoroutine(UIManager.Instance.LoadLevel(score));
+            ClearTrayArray();
+            ClearFoodValues();
+            ClearDrinksOut();
+            ClearDrinkValues();
+            StartNextLevel();
         }
     }
 
-    
+    public void StartNextLevel() 
+    {
+        ActiveWaveIndex++;
+        if(ActiveWaveIndex < AllWaves.Count)
+        {
+            StartCoroutine(StartSequenceOfNextLevel());
+        }
+
+        else
+        {
+            Debug.Log("Run out of waves to spawn!");
+        }
+
+
+    }
+
+    private IEnumerator StartSequenceOfNextLevel()
+    {
+        yield return new WaitForSeconds(5.5f);
+        StartedNewLevel.Invoke();
+        _t = 0;
+        NumCustomersServed = 0;
+        CurrentIndexOfWave = 0;
+        SetWave(ActiveWaveIndex);
+        
+    }
 
     public void MakeCustomersFrozen()
     {
@@ -265,6 +301,15 @@ public class GameManager : MonoBehaviour
         CustomersAreFrozen = !CustomersAreFrozen;
 
 
+    }
+
+    private void SetWave(int index)
+    {
+        CurrentWave = AllWaves[index];
+        if (CurrentWave == null)
+        {
+            Debug.Log("No Current Wave Selected;");
+        }
     }
 
 

@@ -6,6 +6,10 @@ public class OrderInteractable : Interactable
     {
         CustomerManager.Instance.TakeCustomerOrder();
         if (GameManager.Instance.TutorialNoises != null)
-            SoundManager.PlaySound(SoundType.TakeOrder, 1.0f);
+        {
+            if (!GameManager.Instance.FirstCustomerServed)
+                SoundManager.PlaySound(SoundType.TakeOrder);
+        }
+            
     }
 }

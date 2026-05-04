@@ -166,7 +166,7 @@ public class UIManager : MonoBehaviour
         
     }
 
-    public IEnumerator LoadLevel(string name, float scoreAsPercent)
+    public IEnumerator LoadLevel(float scoreAsPercent)
     {
         FinalFaderImage.SetActive(true);
         AddBlackToScreen(FinalFaderImage.GetComponent<Animator>());
@@ -178,7 +178,11 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         AddBlackToScreen(FinalFaderImage.GetComponent<Animator>());
         yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene(name);
+        FinalBacgkroundImage.SetActive(false);
+        FinalScoreText.enabled = false;
+        RemoveBlackFromScreen(FinalFaderImage.GetComponent<Animator>());
+        yield return new WaitForSeconds(1.0f);
+        FinalFaderImage.SetActive(false);
     }
 
 

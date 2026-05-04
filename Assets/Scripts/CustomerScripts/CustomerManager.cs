@@ -40,7 +40,7 @@ public class CustomerManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        GameManager.Instance.StartedNewLevel += ResetCustomerManager;
     }
 
     // Update is called once per frame
@@ -127,4 +127,10 @@ public class CustomerManager : MonoBehaviour
     {
         return CustomersInLine.Count > 0;
     }
+
+    public void ResetCustomerManager()
+    {
+        numCustomers = 0;
+    }
+
 }

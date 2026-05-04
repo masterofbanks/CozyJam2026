@@ -26,7 +26,8 @@ public class BakingInteractable : Interactable
 
         if(GameManager.Instance.TutorialNoises != null)
         {
-            SoundManager.PlaySound(SoundType.Oven);
+            if (!GameManager.Instance.FirstCustomerServed)
+                SoundManager.PlaySound(SoundType.Oven);
 
         }
     }

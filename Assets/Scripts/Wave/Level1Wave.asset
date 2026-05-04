@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ed7291b063c40409c969b67d5171f5, type: 3}
   m_Name: Level1Wave
   m_EditorClassIdentifier: 
-  waves: 0200000004000000
+  waves: 02000000

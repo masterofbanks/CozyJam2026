@@ -18,6 +18,10 @@ public class CoffeeInteractable : MinigameInteractable
         }
 
         if (GameManager.Instance.TutorialNoises != null)
-            SoundManager.PlaySound(SoundType.Drinks);
+        {
+            if (!GameManager.Instance.FirstCustomerServed)
+                SoundManager.PlaySound(SoundType.Drinks);
+
+        }
     }
 }
