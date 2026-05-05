@@ -42,6 +42,7 @@ public class ServingMinigameLogic : MonoBehaviour
                 if (!string.IsNullOrEmpty(arrayOfTrayContents[i]))
                 {
                     TrayButtons[i].gameObject.GetComponentInChildren<TextMeshProUGUI>().text = arrayOfTrayContents[i];
+                    TrayButtons[i].gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetFoodImageFromName(arrayOfTrayContents[i]);
                     TrayButtons[i].gameObject.SetActive(true);
                     Debug.Log(arrayOfTrayContents[i]);
 
@@ -109,6 +110,7 @@ public class ServingMinigameLogic : MonoBehaviour
             currentTrayIndex = indexOfButton;
             string foodName = TrayButtons[currentTrayIndex].gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
             FoodButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = foodName;
+            FoodButton.gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetFoodImageFromName(foodName);
             FoodButton.gameObject.SetActive(true);
             currentFood = foodName;
             TrayButtons[indexOfButton].gameObject.SetActive(false);

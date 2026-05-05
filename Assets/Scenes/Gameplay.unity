@@ -6604,6 +6604,7 @@ MonoBehaviour:
   ActiveWaveIndex: 0
   NumCustomersServed: 0
   RecipesInTray: []
+  NothingSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   DrinkType: 
   TrayIsCooked: 0
   TrayInHand: 0

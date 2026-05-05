@@ -3,6 +3,7 @@ using System.Linq;
 using TMPro;
 using Unity.Multiplayer.Center.Common;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MixingMinigameLogic : MonoBehaviour
 {
@@ -137,7 +138,8 @@ public class MixingMinigameLogic : MonoBehaviour
             Debug.Log("openSlot index out of range look here!!!");
         }
         GameManager.Instance.RecipesInTray[firstOpenSlotInTray] = name;
-        _cannisters[firstOpenSlotInTray].GetComponentInChildren<TextMeshProUGUI>().text = name;
+        //_cannisters[firstOpenSlotInTray].GetComponentInChildren<TextMeshProUGUI>().text = name;
+        _cannisters[firstOpenSlotInTray].GetComponent<Image>().sprite = GameManager.Instance.GetFoodImageFromName(name);
         _cannisters[firstOpenSlotInTray].SetActive(true);
     }
     public bool ThereAreOpenSlots()

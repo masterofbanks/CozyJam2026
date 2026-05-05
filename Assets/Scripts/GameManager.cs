@@ -21,13 +21,16 @@ public class GameManager : MonoBehaviour
 
     [Header("Mixing/Baking")]
     public string[] RecipesInTray;
-    public Tuple<Dictionary<string, int>, int> DrinksContents = new(new(), 0);
+    [SerializeField] private Sprite NothingSprite;
     public string DrinkType;
     public bool TrayIsCooked; //{ get; private set; }
     public bool TrayInHand; //{ get; private set; }
     public bool DrinksInHand;
     public bool PlateInHand { get; private set; }
     public string OrderInHand;
+
+    public Tuple<Dictionary<string, int>, int> DrinksContents = new(new(), 0);
+    private Dictionary<string, Sprite> RecipeImages = new();
 
     [Header("Player Sprites")]
     [SerializeField] private GameObject TraySprite;
@@ -62,6 +65,21 @@ public class GameManager : MonoBehaviour
         CurrentIndexOfWave = 0;
         ActiveWaveIndex = 0;
         SetWave(ActiveWaveIndex);
+        Sprite[] foodImageArray = Resources.LoadAll<Sprite>("neko-cafe-food");
+        if(foodImageArray == null)
+        {
+            Debug.Log("Could not find food images");
+        }
+        else
+        {
+            RecipeImages.Add("Cake", foodImageArray[0]);
+            RecipeImages.Add("Strudel", foodImageArray[2]);
+            RecipeImages.Add("Pie", foodImageArray[3]);
+            RecipeImages.Add("Croissant", foodImageArray[4]);
+            RecipeImages.Add("Toast", foodImageArray[5]);
+            RecipeImages.Add("Nothing", NothingSprite);
+
+        }
     }
 
     private void Start()
@@ -312,5 +330,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    public Sprite GetFoodImageFromName(string name)
+    {
+        return RecipeImages[name];
+    }
 }
