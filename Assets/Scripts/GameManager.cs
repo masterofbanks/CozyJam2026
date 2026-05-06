@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -36,6 +37,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject TraySprite;
     [SerializeField] private GameObject DrinksSprite;
     [SerializeField] private GameObject PlateSprite;
+    [SerializeField] public GameObject DrinkSprite;
+    [SerializeField] public GameObject FoodSprite;
+
 
     [Header("Customer Management")]
     public float TotalCustomerScore = 0;
@@ -247,6 +251,8 @@ public class GameManager : MonoBehaviour
         CleanUpAfterServing();
         GameManager.Instance.TotalCustomerScore += score;
         NumCustomersServed++;
+        DrinkSprite.SetActive(false);
+        FoodSprite.SetActive(false);
         if (!FirstCustomerServed)
         {
             if(TutorialNoises != null)
@@ -333,5 +339,11 @@ public class GameManager : MonoBehaviour
     public Sprite GetFoodImageFromName(string name)
     {
         return RecipeImages[name];
+    }
+
+    public void SetFoodInPlateSprite(string name)
+    {
+        FoodSprite.gameObject.SetActive(true);
+        FoodSprite.GetComponent<SpriteRenderer>().sprite = GetFoodImageFromName(name);
     }
 }

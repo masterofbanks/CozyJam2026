@@ -5688,6 +5688,11 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &690865187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 188096996201732605, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
+  m_PrefabInstance: {fileID: 1679737934360032367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &695343344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5883,6 +5888,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc7ca6df2e84bc4e997f01129a3a022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &763120199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5352701494849377563, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
+  m_PrefabInstance: {fileID: 1679737934360032367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &803586274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9120147438228314097, guid: b8972b8a1daa2cc458e8a74f99681564, type: 3}
@@ -6613,6 +6623,8 @@ MonoBehaviour:
   TraySprite: {fileID: 341196457}
   DrinksSprite: {fileID: 175487071}
   PlateSprite: {fileID: 1087339204}
+  DrinkSprite: {fileID: 763120199}
+  FoodSprite: {fileID: 690865187}
   TotalCustomerScore: 0
   CustomersAreFrozen: 0
   DitherShader: {fileID: -822207758123213011, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}

@@ -112,6 +112,7 @@ public class ServingMinigameLogic : MonoBehaviour
             FoodButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = foodName;
             FoodButton.gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetFoodImageFromName(foodName);
             FoodButton.gameObject.SetActive(true);
+            GameManager.Instance.SetFoodInPlateSprite(foodName);
             currentFood = foodName;
             TrayButtons[indexOfButton].gameObject.SetActive(false);
         }
@@ -135,6 +136,7 @@ public class ServingMinigameLogic : MonoBehaviour
             numberOfDrinks--;
             UpdateCoffeeContents();
             DrinksButton.gameObject.SetActive(true);
+            GameManager.Instance.DrinkSprite.SetActive(true);
 
         }
 
