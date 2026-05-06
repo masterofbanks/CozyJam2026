@@ -1,12 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -48,6 +44,7 @@ public class GameManager : MonoBehaviour
     public FullScreenPassRendererFeature DitherShader;
     public SoundManager TutorialNoises;
     public bool FirstCustomerServed = false;
+    private List<float> _waveScores = new();
 
     public event Action ServedOrderDrinksAction;
     public event Action ServedOrderFoodAction;
@@ -249,7 +246,7 @@ public class GameManager : MonoBehaviour
     {
         CleanOutPlateInHand();
         CleanUpAfterServing();
-        GameManager.Instance.TotalCustomerScore += score;
+        TotalCustomerScore += score;
         NumCustomersServed++;
         DrinkSprite.SetActive(false);
         FoodSprite.SetActive(false);
@@ -274,6 +271,8 @@ public class GameManager : MonoBehaviour
         if (AllCustomersServed())
         {
             float score = TotalCustomerScore * 100f / (CurrentWave.waves.Count * 80f);
+            _waveScores.Add(score);
+            TotalCustomerScore = 0;
             StartCoroutine(UIManager.Instance.LoadLevel(score));
             ClearTrayArray();
             ClearFoodValues();

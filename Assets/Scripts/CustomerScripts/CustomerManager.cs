@@ -131,6 +131,10 @@ public class CustomerManager : MonoBehaviour
     public void ResetCustomerManager()
     {
         numCustomers = 0;
+        foreach(SeatBehavior seat in _seatScripts)
+        {
+            seat.DeoccupySeat();
+        }
     }
 
 }

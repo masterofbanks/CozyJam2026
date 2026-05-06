@@ -8,5 +8,10 @@ public class SeatBehavior : MonoBehaviour
         Occupied = true;
     }
 
+    public void DeoccupySeat()
+    {
+        Occupied = false;
+    }
+
     
 }
