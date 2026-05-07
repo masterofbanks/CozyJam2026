@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 using System.Linq;
+using UnityEngine.Rendering;
 public class CustomerManager : MonoBehaviour
 {
     public static CustomerManager Instance;
@@ -107,16 +108,8 @@ public class CustomerManager : MonoBehaviour
         int randIndex = _random.Next(0, CoffeeOrderTypes.Count);
         CoffeeOrder order = (CoffeeOrder)ScriptableObject.CreateInstance("CoffeeOrder");
         order.Type = CoffeeOrderTypes[randIndex].Type;
-        bool hasMilk = _random.NextDouble() > 0.5;
-        if (hasMilk)
-        {
-            order.NumMilk = 1;
-        }
-        bool hasSugar = _random.NextDouble() > 0.5;
-        if(hasSugar)
-        {
-            order.NumSugar = 1;
-        }
+        order.NumMilk = 0;
+        order.NumSugar = 0;
         string drinksOrder = order.ToString();
         randIndex = _random.Next(0, FoodOrderTypes.Count);
         string finalOrder = drinksOrder + $"-{FoodOrderTypes[randIndex].name}";
