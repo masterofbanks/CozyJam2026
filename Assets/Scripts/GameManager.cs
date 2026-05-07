@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -285,15 +286,7 @@ public class GameManager : MonoBehaviour
     public void StartNextLevel() 
     {
         ActiveWaveIndex++;
-        if(ActiveWaveIndex < AllWaves.Count)
-        {
-            StartCoroutine(StartSequenceOfNextLevel());
-        }
-
-        else
-        {
-            Debug.Log("Run out of waves to spawn!");
-        }
+        StartCoroutine(StartSequenceOfNextLevel());
 
 
     }
@@ -301,11 +294,20 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartSequenceOfNextLevel()
     {
         yield return new WaitForSeconds(5.5f);
-        StartedNewLevel.Invoke();
-        _t = 0;
-        NumCustomersServed = 0;
-        CurrentIndexOfWave = 0;
-        SetWave(ActiveWaveIndex);
+        if (ActiveWaveIndex < AllWaves.Count)
+        {
+            StartedNewLevel.Invoke();
+            _t = 0;
+            NumCustomersServed = 0;
+            CurrentIndexOfWave = 0;
+            SetWave(ActiveWaveIndex);
+        }
+
+        else
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
+        
         
     }
 
