@@ -95,35 +95,44 @@ public class MixingMinigameLogic : MonoBehaviour
 
     public void SubmitRecipe()
     {
-        if (ThereAreOpenSlots())
+        if(_currentIngredientList.Count > 0)
         {
-            foreach (KeyValuePair<string, Dictionary<string, int>> recipe in _allRecipes)
+            if (ThereAreOpenSlots())
             {
-                /*// Source - https://stackoverflow.com/a/3804852
-                    Posted by Nick Jones, modified by community. See post 'Timeline' for change history
-                    Retrieved 2026-05-01, License - CC BY-SA 2.5
-
-                    dic1.Count == dic2.Count && !dic1.Except(dic2).Any();
-
-                 * 
-                 * 
-                 * */
-                if (recipe.Value.Count == _currentItemRecipe.Count && !recipe.Value.Except(_currentItemRecipe).Any())
+                foreach (KeyValuePair<string, Dictionary<string, int>> recipe in _allRecipes)
                 {
-                    Debug.Log(recipe.Key);
-                    AddItemToTray(recipe.Key);
-                    return;
+                    /*// Source - https://stackoverflow.com/a/3804852
+                        Posted by Nick Jones, modified by community. See post 'Timeline' for change history
+                        Retrieved 2026-05-01, License - CC BY-SA 2.5
+
+                        dic1.Count == dic2.Count && !dic1.Except(dic2).Any();
+
+                     * 
+                     * 
+                     * */
+                    if (recipe.Value.Count == _currentItemRecipe.Count && !recipe.Value.Except(_currentItemRecipe).Any())
+                    {
+                        Debug.Log(recipe.Key);
+                        AddItemToTray(recipe.Key);
+                        return;
+                    }
                 }
+                ClearCurrentRecipe();
+                AddItemToTray("Nothing");
+                Debug.Log("Nothing");
             }
-            ClearCurrentRecipe();
-            AddItemToTray("Nothing");
-            Debug.Log("Nothing");
+
+            else
+            {
+                Debug.Log("No Slots Avail!");
+
+            }
         }
+
 
         else
         {
-            Debug.Log("No Slots Avail!");
-
+            Debug.Log("There is nothing in the ingredient list");
         }
 
 

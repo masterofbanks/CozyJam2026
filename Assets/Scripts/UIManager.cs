@@ -185,5 +185,10 @@ public class UIManager : MonoBehaviour
         FinalFaderImage.SetActive(false);
     }
 
+    public void PlayButtonSFX(GameObject sfxObject)
+    {
+        Instantiate(sfxObject);
+    }
+
 
 }

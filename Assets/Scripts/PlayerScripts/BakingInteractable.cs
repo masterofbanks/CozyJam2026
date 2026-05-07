@@ -3,7 +3,7 @@ using UnityEngine;
 public class BakingInteractable : Interactable
 {
     [SerializeField] private float TimeNeededToCookTray = 30f;
-    [SerializeField] private GameObject AlarmSFX;
+    [SerializeField] private GameObject CookingSFX;
     private float t = 0f;
     private bool TrayInOven = false;
     private bool TrayFinishedCooking = false;
@@ -14,6 +14,7 @@ public class BakingInteractable : Interactable
         {
             GameManager.Instance.ThrowTrayInOven();
             TrayInOven = true;
+            Instantiate(CookingSFX, transform.position, Quaternion.identity);
         }
 
         else if (TrayFinishedCooking)
@@ -50,7 +51,6 @@ public class BakingInteractable : Interactable
         t = 0;
         Debug.Log("Tray Finished Cooking");
         TrayFinishedCooking = true;
-        Instantiate(AlarmSFX, transform.position, Quaternion.identity);
     }
 }
 

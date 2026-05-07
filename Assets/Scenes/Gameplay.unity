@@ -6142,8 +6142,8 @@ Transform:
   m_GameObject: {fileID: 874224959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.11, y: -3.14, z: 14.601831}
-  m_LocalScale: {x: 6.1256, y: 1, z: 1}
+  m_LocalPosition: {x: -7.2734, y: -3.14, z: 14.601831}
+  m_LocalScale: {x: 1.8076483, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100663204}
@@ -6629,7 +6629,7 @@ MonoBehaviour:
   CustomersAreFrozen: 0
   DitherShader: {fileID: -822207758123213011, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
   TutorialNoises: {fileID: 1152092002}
-  FirstCustomerServed: 0
+  FirstCustomerServed: 1
 --- !u!114 &1152092002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10061,8 +10061,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d691ec4f78f1d844841d28052d9dbaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeNeededToCookTray: 2
-  AlarmSFX: {fileID: 7871274252421988067, guid: 3686129d145191c4cb6de42f86da5e38, type: 3}
+  TimeNeededToCookTray: 7
+  CookingSFX: {fileID: 7871274252421988067, guid: 9e93c39bbdd435b478390fe0f2d5aa5a, type: 3}
 --- !u!1001 &2098132980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10939,6 +10939,10 @@ PrefabInstance:
     - target: {fileID: 4386322973526906744, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599791800739782360, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4750675255260228325, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
       propertyPath: m_hasFontAssetChanged
