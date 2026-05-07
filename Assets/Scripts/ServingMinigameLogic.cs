@@ -125,6 +125,7 @@ public class ServingMinigameLogic : MonoBehaviour
             TrayButtons[currentTrayIndex].gameObject.SetActive(true);
             FoodButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Empty";
             FoodButton.gameObject.SetActive(false);
+            GameManager.Instance.RemoveFoodInPlate();
             currentFood = null;
         }
     }
@@ -150,6 +151,7 @@ public class ServingMinigameLogic : MonoBehaviour
         UpdateCoffeeContents();
         DrinksButton.gameObject.SetActive(false);
         currentDrink = null;
+        GameManager.Instance.DrinkSprite.SetActive(false);
     }
 
     public void ServePlate()

@@ -5,7 +5,6 @@ public class BakingInteractable : Interactable
     [SerializeField] private float TimeNeededToCookTray = 30f;
     [SerializeField] private GameObject CookingSFX;
     private float t = 0f;
-    private bool TrayInOven = false;
     private bool TrayFinishedCooking = false;
 
     public override void Interact()
@@ -13,14 +12,12 @@ public class BakingInteractable : Interactable
         if (GameManager.Instance.TrayInHand && !GameManager.Instance.TrayIsCooked)
         {
             GameManager.Instance.ThrowTrayInOven();
-            TrayInOven = true;
             Instantiate(CookingSFX, transform.position, Quaternion.identity);
         }
 
         else if (TrayFinishedCooking)
         {
             TrayFinishedCooking = false;
-            TrayInOven = false;
             GameManager.Instance.PutTrayInHand();
             GameManager.Instance.TrayIsCooked = true;
         }
@@ -35,7 +32,7 @@ public class BakingInteractable : Interactable
 
     private void Update()
     {
-        if (TrayInOven)
+        if (GameManager.Instance.TrayInOven)
         {
             t += Time.deltaTime;
             if(t > TimeNeededToCookTray)
@@ -47,7 +44,6 @@ public class BakingInteractable : Interactable
 
     private void FinishedCooking()
     {
-        TrayInOven = false;
         t = 0;
         Debug.Log("Tray Finished Cooking");
         TrayFinishedCooking = true;

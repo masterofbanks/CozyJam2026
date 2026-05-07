@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public string DrinkType;
     public bool TrayIsCooked; //{ get; private set; }
     public bool TrayInHand; //{ get; private set; }
+    public bool TrayInOven;
     public bool DrinksInHand;
     public bool PlateInHand { get; private set; }
     public string OrderInHand;
@@ -134,6 +135,7 @@ public class GameManager : MonoBehaviour
     {
         TrayInHand = false;
         TraySprite.SetActive(false);
+        TrayInOven = true;
     }
     public void PushIntoMinigame()
     {
@@ -158,6 +160,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Tray is Empty!!!");
         }
+
+        if (TrayInOven)
+        {
+            TrayInOven = false;
+        }
         
     }
 
@@ -175,6 +182,7 @@ public class GameManager : MonoBehaviour
         
     }
 
+   
     public void CleanOutPlateInHand()
     {
         PlateInHand = false;
@@ -346,5 +354,11 @@ public class GameManager : MonoBehaviour
     {
         FoodSprite.gameObject.SetActive(true);
         FoodSprite.GetComponent<SpriteRenderer>().sprite = GetFoodImageFromName(name);
+    }
+
+    public void RemoveFoodInPlate()
+    {
+        FoodSprite.gameObject?.SetActive(false);
+        FoodSprite.GetComponent<SpriteRenderer>().sprite = null;
     }
 }

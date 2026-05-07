@@ -6247,6 +6247,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &874367643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8473908641466211661, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
+  m_PrefabInstance: {fileID: 6098572218016867453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d60f795cffafc468fd9ed3360b0764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &999219405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6603,14 +6614,15 @@ MonoBehaviour:
   CurrentWave: {fileID: 0}
   CurrentIndexOfWave: 0
   AllWaves:
-  - {fileID: 11400000, guid: eadf21392b45c5643be4c0b5ab01ad10, type: 2}
+  - {fileID: 11400000, guid: 270cf693f8cc93c479955ca304acbdd2, type: 2}
   ActiveWaveIndex: 0
   NumCustomersServed: 0
   RecipesInTray: []
-  NothingSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  NothingSprite: {fileID: 21300000, guid: 04f83575e77452e469c46814fd4cd4b3, type: 3}
   DrinkType: 
   TrayIsCooked: 0
   TrayInHand: 0
+  TrayInOven: 0
   DrinksInHand: 0
   OrderInHand: 
   TraySprite: {fileID: 341196457}
@@ -10604,7 +10616,27 @@ PrefabInstance:
     - target: {fileID: 478507564201804489, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 874367643}
+    - target: {fileID: 478507564201804489, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 1152092001}
+    - target: {fileID: 478507564201804489, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayButtonSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 478507564201804489, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MakeCustomersFrozen
+      objectReference: {fileID: 0}
+    - target: {fileID: 478507564201804489, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 478507564201804489, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 563624076511659358, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -10933,9 +10965,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 4562821548899079643, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4599791800739782360, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4750675255260228325, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
       propertyPath: m_hasFontAssetChanged

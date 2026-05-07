@@ -10,7 +10,7 @@ public class MixingMinigameInteractable : MinigameInteractable
 
     public override void Interact()
     {
-        if (!GameManager.Instance.TrayInHand && !GameManager.Instance.TrayIsCooked)
+        if (!GameManager.Instance.TrayInHand && !GameManager.Instance.TrayIsCooked && !GameManager.Instance.TrayInOven)
         {
             GameManager.Instance.PushIntoMinigame();
             StartCoroutine(InteractSequence());
