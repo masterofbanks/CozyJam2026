@@ -6614,7 +6614,9 @@ MonoBehaviour:
   CurrentWave: {fileID: 0}
   CurrentIndexOfWave: 0
   AllWaves:
-  - {fileID: 11400000, guid: 270cf693f8cc93c479955ca304acbdd2, type: 2}
+  - {fileID: 11400000, guid: eadf21392b45c5643be4c0b5ab01ad10, type: 2}
+  - {fileID: 11400000, guid: 5573e25e3fa54504ea85d8d0d5aa71e5, type: 2}
+  - {fileID: 11400000, guid: 1d0b35f77c646904ca95ce4666e19cc8, type: 2}
   ActiveWaveIndex: 0
   NumCustomersServed: 0
   RecipesInTray: []
@@ -10549,8 +10551,12 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2844191518607549905, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0362
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844191518607549905, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.05
+      value: 7.0319
       objectReference: {fileID: 0}
     - target: {fileID: 2844191518607549905, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
       propertyPath: m_LocalPosition.y
