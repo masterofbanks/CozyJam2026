@@ -2,6 +2,7 @@ using Algorithms;
 using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -22,14 +23,16 @@ public class CustomerBehavior : MonoBehaviour
     public int MinHappyRating = 60;
     public int MinMediocreRating = 30;
     public float DecreaseScaling = 0.0001f;
-    public float CurrentRating; 
+    public float CurrentRating;
 
-
-    public NavMeshAgent agent { get; private set; }
-    private Animator anime;
-    private AnimateCat animCatScript;
+    [Header("Character Animations")]
+    [SerializeField] private CharacterAnimations anims;
     public Animator AreaAnimator;
     public Animator MoodAnimator;
+    private Animator anime;
+    private AnimateCat animCatScript;
+
+    public NavMeshAgent agent { get; private set; }
     public CustomerStateMachine stateMachine;
 
     private bool isMoving;
@@ -43,6 +46,7 @@ public class CustomerBehavior : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anime = GetComponent<Animator>();
+        anime.runtimeAnimatorController = anims.GetRandomCharacterController();
         animCatScript = new AnimateCat(anime);
         stateMachine = new CustomerStateMachine(this);
         IDText = GetComponentInChildren<TextMeshProUGUI>();
