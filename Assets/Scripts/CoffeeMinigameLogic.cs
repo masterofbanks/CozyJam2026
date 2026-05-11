@@ -24,6 +24,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
     [SerializeField] private int MaxCapacity = 6;
     [SerializeField] private CoffeeTypes CoffeeType;
     [SerializeField] private BrewStates BrewState;
+    [SerializeField] private Animator CoffeeAnimator;
     private AudioSource coffeePotSource;
     private List<GameObject> _listOfIngredientGameObjects = new();
 
@@ -38,6 +39,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
     private float _t;
     private int _cupsOfWater;
     private Dictionary<string, int> _currentContents;
+    
 
 
     private void Awake()
@@ -66,18 +68,15 @@ public class CoffeeMinigameLogic : MonoBehaviour
             Destroy(_listOfIngredientGameObjects[i]);
         }
         _listOfIngredientGameObjects.Clear();
-        
+        CoffeeAnimator.SetBool("filled", false);
 
 
     }
 
     private string ConvertContentsToText()
     {
-        string answer = $"Cups: x{_cupsOfWater}\n";   
-        foreach(KeyValuePair<string, int> pair in _currentContents)
-        {
-            answer += $"{pair.Key}: x{pair.Value}\n";
-        }
+        string answer = $"Type: {CoffeeType.ToString()}\n";
+        answer += $"Cups: x{_cupsOfWater}\n";   
 
         return answer;
     }
@@ -107,6 +106,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
         Instantiate(FinishedSFX);
         coffeePotSource.Stop();
         _t = 0;
+        CoffeeAnimator.SetBool("filled", true);
 
     }
 
@@ -134,6 +134,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
         if(BrewState == BrewStates.NotBrewing)
         {
             CoffeeType = (CoffeeTypes)type;
+            ContentsText.text = ConvertContentsToText();
         }
     }
 
@@ -181,6 +182,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
             GameManager.Instance.PutDrinksInHand();
             UIManager.Instance.SendBackToCatCamera(thisCam);
             UIManager.Instance.ToggleDefaultMinigameUI();
+            CoffeeAnimator.SetBool("filled", false);
         }
     }
 
