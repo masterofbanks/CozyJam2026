@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,10 @@ public class PlayerInput : MonoBehaviour
     [Header("Interactables")]
     [SerializeField] private Interactable CurrentInteractable;
 
+    [Header("Animation")]
+    [SerializeField] private CharacterAnimations CurrentCharacterAnimations;
+    private Dictionary<string, RuntimeAnimatorController> _animations;
+
 
     //input fields
     public InputSystem_Actions ISAs;
@@ -36,9 +41,11 @@ public class PlayerInput : MonoBehaviour
 
     private void Awake()
     {
+        _animations = CurrentCharacterAnimations.ConvertListToDictionary();
         ISAs = new InputSystem_Actions();
         rb2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _animator.runtimeAnimatorController = _animations[PlayerPrefs.GetString("PlayerType")];
         _animCat = new AnimateCat(_animator);
     }
     void Start()

@@ -11,4 +11,14 @@ public class CharacterAnimations : ScriptableObject
         int randIndex = r.Next(0, characterAnimationControllers.Count);
         return characterAnimationControllers[randIndex];
     }
+
+    public Dictionary<string, RuntimeAnimatorController> ConvertListToDictionary()
+    {
+        Dictionary<string, RuntimeAnimatorController> answer = new();
+        foreach(var controller in characterAnimationControllers)
+        {
+            answer.Add(controller.name, controller);
+        }
+        return answer;
+    }
 }

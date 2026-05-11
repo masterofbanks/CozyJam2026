@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6.35
   CurrentInteractable: {fileID: 0}
+  CurrentCharacterAnimations: {fileID: 11400000, guid: fac82d0a14a5b53459cdd9a8c326d302, type: 2}
 --- !u!50 &1286474707273392297
 Rigidbody2D:
   serializedVersion: 5
