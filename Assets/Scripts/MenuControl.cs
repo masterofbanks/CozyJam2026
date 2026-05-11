@@ -7,4 +7,10 @@ public class MenuControl : MonoBehaviour
     {
         SceneManager.LoadScene(name);
     }
+
+    public void SetPlayerChoice(string choice)
+    {
+        PlayerPrefs.SetString("PlayerType", choice);
+        LoadLevel("Gameplay");
+    }
 }
