@@ -259,15 +259,7 @@ public class GameManager : MonoBehaviour
         NumCustomersServed++;
         DrinkSprite.SetActive(false);
         FoodSprite.SetActive(false);
-        if (!FirstCustomerServed)
-        {
-            if(TutorialNoises != null)
-            {
-                SoundManager.PlaySound(SoundType.Extra);
-            }
-            FirstCustomerServed = true;
-
-        }
+        
     }
 
     public bool AllCustomersServed()
@@ -361,4 +353,6 @@ public class GameManager : MonoBehaviour
         FoodSprite.gameObject?.SetActive(false);
         FoodSprite.GetComponent<SpriteRenderer>().sprite = null;
     }
+
+   
 }

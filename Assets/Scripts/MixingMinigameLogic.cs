@@ -202,7 +202,12 @@ public class MixingMinigameLogic : MonoBehaviour
 
     public void MoveToOven()
     {
-        GameManager.Instance.PutTrayInHand();
+        if (!SoundManager.TutorialIsPlaying())
+        {
+            GameManager.Instance.PutTrayInHand();
+            SoundManager.PlaySound(SoundType.Oven);
+
+        }
     }
 
     public void CleanUpStation()

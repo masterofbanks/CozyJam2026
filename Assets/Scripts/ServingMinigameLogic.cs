@@ -165,22 +165,20 @@ public class ServingMinigameLogic : MonoBehaviour
             }
             finalOrder = $"{currentDrink}-{currentFood}";
             GameManager.Instance.PutPlateInHand(finalOrder);
-            if (GameManager.Instance.TutorialNoises != null)
-            {
-                if (!GameManager.Instance.FirstCustomerServed)
-                    SoundManager.PlaySound(SoundType.Walking);
-            }
-                
+            UIManager.Instance.SendBackToCatCamera(Cam);
+            if (!GameManager.Instance.FirstCustomerServed)
+                SoundManager.PlaySound(SoundType.Walking);
+
             //DrinksButton.gameObject.SetActive(false);
             //FoodButton.gameObject.SetActive(false);
-            
+
         }
         else
         {
             GameManager.Instance.CleanOutPlateInHand();
         }
 
-        UIManager.Instance.SendBackToCatCamera(Cam);
+        
 
 
 

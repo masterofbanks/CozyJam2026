@@ -54,12 +54,20 @@ public class UIManager : MonoBehaviour
 
     public void ToggleDefaultMinigameUI()
     {
-        DefaultMinigameUI.SetActive(!DefaultMinigameUI.activeSelf);
+        if (!SoundManager.TutorialIsPlaying())
+        {
+            DefaultMinigameUI.SetActive(!DefaultMinigameUI.activeSelf);
+
+        }
     }
 
     public void SendBackToCatCamera(GameObject otherCam)
     {
-        StartCoroutine(BringBackToNormalCamSequence(otherCam));
+        if (!SoundManager.TutorialIsPlaying())
+        {
+            StartCoroutine(BringBackToNormalCamSequence(otherCam));
+
+        }
     }
 
     IEnumerator BringBackToNormalCamSequence(GameObject otherCam)

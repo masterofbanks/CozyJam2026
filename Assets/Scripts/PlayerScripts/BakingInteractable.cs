@@ -20,14 +20,12 @@ public class BakingInteractable : Interactable
             TrayFinishedCooking = false;
             GameManager.Instance.PutTrayInHand();
             GameManager.Instance.TrayIsCooked = true;
+            if (GameManager.Instance.DrinksInHand)
+            {
+                SoundManager.PlaySound(SoundType.AfterDrinksAndOven);
+            }
         }
 
-        if(GameManager.Instance.TutorialNoises != null)
-        {
-            if (!GameManager.Instance.FirstCustomerServed)
-                SoundManager.PlaySound(SoundType.Oven);
-
-        }
     }
 
     private void Update()

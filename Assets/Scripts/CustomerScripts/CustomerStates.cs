@@ -32,7 +32,7 @@ public class CustomerStartState : I_CustomerState
     public void Update()
     {
         behaviorScript.MoveTheCustomerNormally();
-        if (behaviorScript.CurrentRating > 0 && !GameManager.Instance.CustomersAreFrozen)
+        if (behaviorScript.CurrentRating > 0 && !GameManager.Instance.CustomersAreFrozen && GameManager.Instance.FirstCustomerServed)
         {
             behaviorScript.CurrentRating -= behaviorScript.DecreaseScaling * Time.deltaTime;
         }
@@ -76,7 +76,7 @@ public class WaitForFoodState : I_CustomerState
     public void Update()
     {
         behaviorScript.MoveTheCustomerNormally();
-        if(behaviorScript.CurrentRating > 0 && !GameManager.Instance.CustomersAreFrozen)
+        if(behaviorScript.CurrentRating > 0 && !GameManager.Instance.CustomersAreFrozen && GameManager.Instance.FirstCustomerServed)
         {
             behaviorScript.CurrentRating -= behaviorScript.DecreaseScaling * Time.deltaTime;
         }

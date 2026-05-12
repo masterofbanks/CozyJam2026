@@ -169,7 +169,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
 
     public void SubmitCoffee()
     {
-        if(BrewState == BrewStates.Brewed)
+        if(BrewState == BrewStates.Brewed && !SoundManager.TutorialIsPlaying())
         {
             Dictionary<string, int> copyOfCurrentContents = new();
             foreach(KeyValuePair<string, int> pair in _currentContents)
@@ -183,7 +183,17 @@ public class CoffeeMinigameLogic : MonoBehaviour
             UIManager.Instance.SendBackToCatCamera(thisCam);
             UIManager.Instance.ToggleDefaultMinigameUI();
             CoffeeAnimator.SetBool("filled", false);
+            if(GameManager.Instance.TrayInHand && GameManager.Instance.TrayIsCooked)
+            {
+                SoundManager.PlaySound(SoundType.AfterDrinksAndOven);
+            }
         }
+    }
+
+    public void Leave()
+    {
+        UIManager.Instance.SendBackToCatCamera(thisCam);
+        UIManager.Instance.ToggleDefaultMinigameUI();
     }
 
     private void CleanUpSection()

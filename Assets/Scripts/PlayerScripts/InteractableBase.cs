@@ -3,6 +3,7 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
+    protected bool TutorialPlayed = false;
     public abstract void Interact();
 }
 

@@ -11,17 +11,21 @@ public class CoffeeInteractable : MinigameInteractable
 
     public override void Interact()
     {
-        if (!GameManager.Instance.DrinksInHand)
+        if (!SoundManager.TutorialIsPlaying())
         {
-            GameManager.Instance.PushIntoMinigame();
-            StartCoroutine(InteractSequence());
-        }
+            if (!GameManager.Instance.DrinksInHand)
+            {
+                GameManager.Instance.PushIntoMinigame();
+                StartCoroutine(InteractSequence());
+            }
 
-        if (GameManager.Instance.TutorialNoises != null)
-        {
-            if (!GameManager.Instance.FirstCustomerServed)
-                SoundManager.PlaySound(SoundType.Drinks);
+            if (GameManager.Instance.TutorialNoises != null)
+            {
+                if (!GameManager.Instance.FirstCustomerServed)
+                    SoundManager.PlaySound(SoundType.Drinks);
 
+            }
         }
+        
     }
 }

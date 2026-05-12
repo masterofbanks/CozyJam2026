@@ -7,9 +7,9 @@ public enum SoundType
     Mixing,
     Oven,
     Drinks,
+    AfterDrinksAndOven,
     Serving,
-    Walking,
-    Extra
+    Walking
 }
 
 [RequireComponent(typeof(AudioSource))]
@@ -39,5 +39,10 @@ public class SoundManager : MonoBehaviour
     public static void PauseSound()
     {
         instance.audioSrc.Pause();
+    }
+
+    public static bool TutorialIsPlaying()
+    {
+        return instance.audioSrc.isPlaying;
     }
 }
