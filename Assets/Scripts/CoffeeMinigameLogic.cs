@@ -183,7 +183,7 @@ public class CoffeeMinigameLogic : MonoBehaviour
             UIManager.Instance.SendBackToCatCamera(thisCam);
             UIManager.Instance.ToggleDefaultMinigameUI();
             CoffeeAnimator.SetBool("filled", false);
-            if(GameManager.Instance.TrayInHand && GameManager.Instance.TrayIsCooked)
+            if(GameManager.Instance.TrayInHand && GameManager.Instance.TrayIsCooked && !GameManager.Instance.FirstCustomerServed)
             {
                 SoundManager.PlaySound(SoundType.AfterDrinksAndOven);
             }

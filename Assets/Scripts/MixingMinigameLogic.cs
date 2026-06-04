@@ -205,7 +205,8 @@ public class MixingMinigameLogic : MonoBehaviour
         if (!SoundManager.TutorialIsPlaying())
         {
             GameManager.Instance.PutTrayInHand();
-            SoundManager.PlaySound(SoundType.Oven);
+            if(!GameManager.Instance.FirstCustomerServed)
+                SoundManager.PlaySound(SoundType.Oven);
 
         }
     }

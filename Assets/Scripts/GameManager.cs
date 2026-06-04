@@ -259,6 +259,10 @@ public class GameManager : MonoBehaviour
         NumCustomersServed++;
         DrinkSprite.SetActive(false);
         FoodSprite.SetActive(false);
+        if (!FirstCustomerServed)
+        {
+            FirstCustomerServed = true;
+        }
         
     }
 

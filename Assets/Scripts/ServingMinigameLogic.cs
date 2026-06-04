@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -156,34 +157,45 @@ public class ServingMinigameLogic : MonoBehaviour
 
     public void ServePlate()
     {
-        if(FoodButton.gameObject.activeSelf || DrinksButton.gameObject.activeSelf)
+        if (!SoundManager.TutorialIsPlaying())
         {
-            if (currentTrayIndex != -1 && FoodButton.gameObject.activeSelf)
-            {
-                GameManager.Instance.RecipesInTray[currentTrayIndex] = null;
-                //currentTrayIndex = -1;
-            }
-            finalOrder = $"{currentDrink}-{currentFood}";
-            GameManager.Instance.PutPlateInHand(finalOrder);
             UIManager.Instance.SendBackToCatCamera(Cam);
-            if (!GameManager.Instance.FirstCustomerServed)
-                SoundManager.PlaySound(SoundType.Walking);
+            if (FoodButton.gameObject.activeSelf || DrinksButton.gameObject.activeSelf)
+            {
+                if (currentTrayIndex != -1 && FoodButton.gameObject.activeSelf)
+                {
+                    GameManager.Instance.RecipesInTray[currentTrayIndex] = null;
+                    //currentTrayIndex = -1;
+                }
+                finalOrder = $"{currentDrink}-{currentFood}";
+                GameManager.Instance.PutPlateInHand(finalOrder);
+                if (!GameManager.Instance.FirstCustomerServed)
+                {
+                    Debug.Log("Tring to play walking tutorial!");
+                    SoundManager.PlaySound(SoundType.Walking);
 
-            //DrinksButton.gameObject.SetActive(false);
-            //FoodButton.gameObject.SetActive(false);
+                }
 
+
+                //DrinksButton.gameObject.SetActive(false);
+                //FoodButton.gameObject.SetActive(false);
+
+            }
+            else
+            {
+                GameManager.Instance.CleanOutPlateInHand();
+            }
         }
-        else
-        {
-            GameManager.Instance.CleanOutPlateInHand();
-        }
-
         
 
 
 
 
+
+
     }
+
+    
 
     public void ClearStuffs()
     {

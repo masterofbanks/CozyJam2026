@@ -4,10 +4,10 @@ public class OrderInteractable : Interactable
 {
     public override void Interact()
     {
-        if (!SoundManager.TutorialIsPlaying() && !TutorialPlayed)
+        if (!SoundManager.TutorialIsPlaying())
         {
             CustomerManager.Instance.TakeCustomerOrder();
-            if (GameManager.Instance.TutorialNoises != null)
+            if (GameManager.Instance.TutorialNoises != null && !TutorialPlayed)
             {
                 if (!GameManager.Instance.FirstCustomerServed)
                 {

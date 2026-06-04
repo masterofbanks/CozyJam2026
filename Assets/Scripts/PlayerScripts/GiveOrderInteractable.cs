@@ -14,6 +14,7 @@ public class GiveOrderInteractable : Interactable
         if (!CustomerBehaviorScript.agent.updatePosition && !string.IsNullOrEmpty(GameManager.Instance.OrderInHand))
         {
             CustomerBehaviorScript.GiveFood(GameManager.Instance.OrderInHand);
+
         }
     }
 }

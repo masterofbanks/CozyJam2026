@@ -1,8 +1,5 @@
 using Algorithms;
-using System.Runtime.CompilerServices;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -157,6 +154,7 @@ public class CustomerBehavior : MonoBehaviour
         CurrentRating -= distanceBetweenServedAndActual;
         UIManager.Instance.RemoveOrderSlip(ID);
         GameManager.Instance.GiveFood(CurrentRating);
+
 
     }
 

@@ -14,7 +14,8 @@ public class ServingInteractable : MinigameInteractable
         if (!SoundManager.TutorialIsPlaying())
         {
             GameManager.Instance.PushIntoMinigame();
-            SoundManager.PlaySound(SoundType.Serving);
+            if(!GameManager.Instance.FirstCustomerServed)
+                SoundManager.PlaySound(SoundType.Serving);
             StartCoroutine(InteractSequence());
             
         }
