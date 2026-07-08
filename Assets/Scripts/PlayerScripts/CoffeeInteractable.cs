@@ -9,6 +9,13 @@ public class CoffeeInteractable : MinigameInteractable
 
     }
 
+   
+    private void Start()
+    {
+        GameManager.Instance.BrewedSomeDrinks += PutXOnMinigame;
+        GameManager.Instance.ServedOrderDrinksAction += RemoveXFromMinigame;
+    }
+
     public override void Interact()
     {
         if (!SoundManager.TutorialIsPlaying())
@@ -28,4 +35,7 @@ public class CoffeeInteractable : MinigameInteractable
         }
         
     }
+
+    
+
 }

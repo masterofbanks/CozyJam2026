@@ -32,10 +32,7 @@ public class CustomerStartState : I_CustomerState
     public void Update()
     {
         behaviorScript.MoveTheCustomerNormally();
-        if (behaviorScript.CurrentRating > 0 && !GameManager.Instance.CustomersAreFrozen && GameManager.Instance.FirstCustomerServed)
-        {
-            behaviorScript.CurrentRating -= behaviorScript.DecreaseScaling * Time.deltaTime;
-        }
+        behaviorScript.UpdateRatingSystem(Time.deltaTime);
         if (behaviorScript.InOrderArea && !behaviorScript.FinishedOrdering)
         {
             CustomerManager.Instance.SetCurrentCustomer(behaviorScript);
@@ -76,10 +73,7 @@ public class WaitForFoodState : I_CustomerState
     public void Update()
     {
         behaviorScript.MoveTheCustomerNormally();
-        if(behaviorScript.CurrentRating > 0 && !GameManager.Instance.CustomersAreFrozen && GameManager.Instance.FirstCustomerServed)
-        {
-            behaviorScript.CurrentRating -= behaviorScript.DecreaseScaling * Time.deltaTime;
-        }
+        behaviorScript.UpdateRatingSystem(Time.deltaTime);
         if (behaviorScript.HasFood)
         {
             behaviorScript.stateMachine.TransitionTo(behaviorScript.stateMachine.LeavingState);

@@ -16,6 +16,7 @@ public class CustomerBehavior : MonoBehaviour
     public int ID = -1;
     public TextMeshProUGUI IDText;
     public TextMeshProUGUI NameTextBox;
+    private float _timeAlive = 0f;
 
     [Header("Rating System")]
     public int MaxHappinessRating = 80;
@@ -23,6 +24,7 @@ public class CustomerBehavior : MonoBehaviour
     public int MinMediocreRating = 30;
     public float DecreaseScaling = 0.0001f;
     public float CurrentRating;
+    public float TimeToStartDecreasing = 140f;
 
     [Header("Character Animations")]
     [SerializeField] private CharacterAnimations anims;
@@ -188,5 +190,22 @@ public class CustomerBehavior : MonoBehaviour
     {
         GameManager.Instance.FreezeCustomers -= FreezeCustomer;
         GameManager.Instance.UnfreezeCustomers -= UnfreezeCustomer;
+    }
+
+    public bool CanDecreaseRating()
+    {
+        return CurrentRating > 0 && _timeAlive > TimeToStartDecreasing && !GameManager.Instance.CustomersAreFrozen && GameManager.Instance.FirstCustomerServed;
+    }
+
+    public void UpdateRatingSystem(float deltaTime)
+    {
+        _timeAlive += deltaTime;
+        if(CanDecreaseRating())
+        {
+            CurrentRating -= DecreaseScaling * deltaTime;
+            Debug.Log("hi");
+
+        }
+
     }
 }

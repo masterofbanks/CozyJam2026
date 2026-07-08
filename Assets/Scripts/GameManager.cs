@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
     public event Action FreezeCustomers;
     public event Action UnfreezeCustomers;
     public event Action StartedNewLevel;
+    public event Action BrewedSomeDrinks;
+    public event Action MixedSomeFood;
 
     private void Awake()
     {
@@ -167,6 +169,8 @@ public class GameManager : MonoBehaviour
         {
             TrayInHand = true;
             TraySprite.SetActive(TrayInHand);
+            MixedSomeFood?.Invoke();
+
         }
 
         else
@@ -185,6 +189,7 @@ public class GameManager : MonoBehaviour
     {
         DrinksInHand = true;
         CoffeeMakerSprite.SetActive(DrinksInHand);
+        BrewedSomeDrinks?.Invoke(); 
     }
 
     public void AddPlateInHand(string foodOrder, string drinksOrder)

@@ -13,6 +13,7 @@ public abstract class MinigameInteractable : Interactable
     [SerializeField] private float CameraDelay = 1.0f;
     [SerializeField] private GameObject GameCamera;
     [SerializeField] private GameObject MinigameCamera;
+    [SerializeField] protected GameObject X_Object;
 
     [Header("UI")]
     [SerializeField] protected GameObject UI;
@@ -49,6 +50,16 @@ public abstract class MinigameInteractable : Interactable
         OpenCamera();
         yield return new WaitForSeconds(CameraDelay);
         UIManager.Instance.RemoveFader();
+    }
+
+    protected void PutXOnMinigame()
+    {
+        X_Object.SetActive(true);
+    }
+
+    protected void RemoveXFromMinigame()
+    {
+        X_Object.SetActive(false);
     }
 }
 

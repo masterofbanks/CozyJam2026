@@ -3232,6 +3232,7 @@ MonoBehaviour:
   CameraDelay: 1
   GameCamera: {fileID: 131578502}
   MinigameCamera: {fileID: 471097615}
+  X_Object: {fileID: 0}
   UI: {fileID: 57891123}
 --- !u!1 &268963229 stripped
 GameObject:
@@ -3512,6 +3513,7 @@ MonoBehaviour:
   CameraDelay: 1
   GameCamera: {fileID: 131578502}
   MinigameCamera: {fileID: 1100663201}
+  X_Object: {fileID: 945654649}
   UI: {fileID: 348121581}
 --- !u!1 &471097615
 GameObject:
@@ -6248,6 +6250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d60f795cffafc468fd9ed3360b0764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &945654649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4024895807972805730, guid: b8972b8a1daa2cc458e8a74f99681564, type: 3}
+  m_PrefabInstance: {fileID: 7348319192167687215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &999219405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6328,6 +6335,7 @@ MonoBehaviour:
   CameraDelay: 1
   GameCamera: {fileID: 131578502}
   MinigameCamera: {fileID: 1085383879}
+  X_Object: {fileID: 2136405902}
   UI: {fileID: 1828503566}
 --- !u!1 &1023668565 stripped
 GameObject:
@@ -6598,7 +6606,8 @@ MonoBehaviour:
   CurrentWave: {fileID: 0}
   CurrentIndexOfWave: 0
   AllWaves:
-  - {fileID: 11400000, guid: eadf21392b45c5643be4c0b5ab01ad10, type: 2}
+  - {fileID: 11400000, guid: 5573e25e3fa54504ea85d8d0d5aa71e5, type: 2}
+  - {fileID: 11400000, guid: 5573e25e3fa54504ea85d8d0d5aa71e5, type: 2}
   ActiveWaveIndex: 0
   NumCustomersServed: 0
   RecipesInTray: []
@@ -10386,6 +10395,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2136405902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4024895807972805730, guid: b8972b8a1daa2cc458e8a74f99681564, type: 3}
+  m_PrefabInstance: {fileID: 999219405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1679737934360032367
 PrefabInstance:
   m_ObjectHideFlags: 0
