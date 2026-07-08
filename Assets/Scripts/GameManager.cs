@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -26,17 +27,17 @@ public class GameManager : MonoBehaviour
     public bool TrayInOven;
     public bool DrinksInHand;
     public bool PlateInHand { get; private set; }
-    public string OrderInHand;
+    public List<string> OrdersInHand;
 
     public Tuple<Dictionary<string, int>, int> DrinksContents = new(new(), 0);
     private Dictionary<string, Sprite> RecipeImages = new();
+    private Dictionary<string, Sprite> DrinkTypes = new();
 
     [Header("Player Sprites")]
     [SerializeField] private GameObject TraySprite;
-    [SerializeField] private GameObject DrinksSprite;
-    [SerializeField] private GameObject PlateSprite;
-    [SerializeField] public GameObject DrinkSprite;
-    [SerializeField] public GameObject FoodSprite;
+    [SerializeField] private GameObject CoffeeMakerSprite;
+    [SerializeField] private GameObject PlateImage;
+    [SerializeField] private GameObject PlateParentCanvas;
 
 
     [Header("Customer Management")]
@@ -83,6 +84,18 @@ public class GameManager : MonoBehaviour
             RecipeImages.Add("Nothing", NothingSprite);
 
         }
+
+        Sprite[] drinkImageArray = Resources.LoadAll<Sprite>("DrinkTypeImages");
+        if(drinkImageArray == null)
+        {
+            Debug.Log("Could not find drink images");
+        }
+        else
+        {
+            DrinkTypes.Add("French", drinkImageArray[1]);
+            DrinkTypes.Add("Colombian", drinkImageArray[0]);
+            
+        }
     }
 
     private void Start()
@@ -109,10 +122,10 @@ public class GameManager : MonoBehaviour
         if (CurrentIndexOfWave < CurrentWave.waves.Count)
         {
             _t += Time.deltaTime;
-            if (_t > CurrentWave.waves[CurrentIndexOfWave])
+            if (_t > CurrentWave.waves[CurrentIndexOfWave].TimeOfAppearance)
             {
+                CustomerManager.Instance.SpawnCustomer(CurrentWave.waves[CurrentIndexOfWave].IsPreset);
                 CurrentIndexOfWave++;
-                CustomerManager.Instance.SpawnCustomer();
             }
         }
         
@@ -171,23 +184,24 @@ public class GameManager : MonoBehaviour
     public void PutDrinksInHand()
     {
         DrinksInHand = true;
-        DrinksSprite.SetActive(DrinksInHand);
+        CoffeeMakerSprite.SetActive(DrinksInHand);
     }
 
-    public void PutPlateInHand(string finalOrder)
+    public void AddPlateInHand(string foodOrder, string drinksOrder)
     {
         PlateInHand = true;
-        PlateSprite.SetActive(PlateInHand);
-        OrderInHand = finalOrder;
-        
+        GameObject plate = Instantiate(PlateImage, PlateParentCanvas.transform);
+        string finalOrder = $"{drinksOrder}-{foodOrder}";
+        OrdersInHand.Add(finalOrder);
+        plate.GetComponent<PlateBehavior>().SetUpImagesWithinPlate(drinksOrder, foodOrder);
     }
 
    
     public void CleanOutPlateInHand()
     {
         PlateInHand = false;
-        PlateSprite.SetActive(PlateInHand);
-        OrderInHand = null;
+        //PlateSprite.SetActive(PlateInHand);
+        //OrderInHand = null;
     }
 
     public void ChangeNumberOfDrinks(int newNumberOfDrinks)
@@ -245,7 +259,7 @@ public class GameManager : MonoBehaviour
         {
             DrinkType = null;
             DrinksInHand = false;
-            DrinksSprite.SetActive(false);
+            CoffeeMakerSprite.SetActive(false);
             ServedOrderDrinksAction?.Invoke();
 
         }
@@ -257,13 +271,15 @@ public class GameManager : MonoBehaviour
         CleanUpAfterServing();
         TotalCustomerScore += score;
         NumCustomersServed++;
-        DrinkSprite.SetActive(false);
-        FoodSprite.SetActive(false);
+        //DrinkSprite.SetActive(false);
+        //FoodSprite.SetActive(false);
         if (!FirstCustomerServed)
         {
             FirstCustomerServed = true;
         }
-        
+        OrdersInHand.RemoveAt(0);   
+        Destroy(PlateParentCanvas.transform.GetChild(0).gameObject);
+
     }
 
     public bool AllCustomersServed()
@@ -343,19 +359,40 @@ public class GameManager : MonoBehaviour
 
     public Sprite GetFoodImageFromName(string name)
     {
-        return RecipeImages[name];
+        if(RecipeImages.ContainsKey(name))
+        {
+            return RecipeImages[name];
+        }
+        else
+        {
+            Debug.Log($"Could not find food image for {name}");
+            return null;
+        }
+    }
+
+    public Sprite GetDrinkTypeImageFromName(string name)
+    {
+        if(DrinkTypes.ContainsKey(name))
+        {
+            return DrinkTypes[name];
+        }
+        else
+        {
+            Debug.Log($"Could not find drink type image for {name}");
+            return null;
+        }
     }
 
     public void SetFoodInPlateSprite(string name)
     {
-        FoodSprite.gameObject.SetActive(true);
-        FoodSprite.GetComponent<SpriteRenderer>().sprite = GetFoodImageFromName(name);
+        //FoodSprite.gameObject.SetActive(true);
+       // FoodSprite.GetComponent<SpriteRenderer>().sprite = GetFoodImageFromName(name);
     }
 
     public void RemoveFoodInPlate()
     {
-        FoodSprite.gameObject?.SetActive(false);
-        FoodSprite.GetComponent<SpriteRenderer>().sprite = null;
+        //FoodSprite.gameObject?.SetActive(false);
+        //GetComponent<SpriteRenderer>().sprite = null;
     }
 
    

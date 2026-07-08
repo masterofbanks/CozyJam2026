@@ -12,6 +12,11 @@ public class CharacterAnimations : ScriptableObject
         return characterAnimationControllers[randIndex];
     }
 
+    public RuntimeAnimatorController GetCharacterController(int index)
+    {
+        return characterAnimationControllers[index];
+    }
+
     public Dictionary<string, RuntimeAnimatorController> ConvertListToDictionary()
     {
         Dictionary<string, RuntimeAnimatorController> answer = new();

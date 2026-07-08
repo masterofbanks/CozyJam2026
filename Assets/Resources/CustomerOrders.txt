@@ -1,0 +1,5000 @@
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Toast
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Strudel
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Cake
+------------------------
+Type: Colombian
+Milk: x0
+Sugar: x0
+-Pie
+------------------------
+Type: French
+Milk: x0
+Sugar: x0
+-Croissant
+------------------------

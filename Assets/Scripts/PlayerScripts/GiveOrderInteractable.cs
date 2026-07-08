@@ -11,9 +11,9 @@ public class GiveOrderInteractable : Interactable
     }
     public override void Interact()
     {
-        if (!CustomerBehaviorScript.agent.updatePosition && !string.IsNullOrEmpty(GameManager.Instance.OrderInHand))
+        if (!CustomerBehaviorScript.agent.updatePosition && GameManager.Instance.OrdersInHand.Count > 0)
         {
-            CustomerBehaviorScript.GiveFood(GameManager.Instance.OrderInHand);
+            CustomerBehaviorScript.GiveFood(GameManager.Instance.OrdersInHand[0]);
 
         }
     }

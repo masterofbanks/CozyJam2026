@@ -5688,11 +5688,6 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!1 &690865187 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 188096996201732605, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
-  m_PrefabInstance: {fileID: 1679737934360032367}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &695343344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5888,11 +5883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc7ca6df2e84bc4e997f01129a3a022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &763120199 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5352701494849377563, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
-  m_PrefabInstance: {fileID: 1679737934360032367}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &803586274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9120147438228314097, guid: b8972b8a1daa2cc458e8a74f99681564, type: 3}
@@ -6451,11 +6441,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1087339204 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3477878207647054264, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
-  m_PrefabInstance: {fileID: 1679737934360032367}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1100663201
 GameObject:
   m_ObjectHideFlags: 0
@@ -6614,11 +6599,6 @@ MonoBehaviour:
   CurrentIndexOfWave: 0
   AllWaves:
   - {fileID: 11400000, guid: eadf21392b45c5643be4c0b5ab01ad10, type: 2}
-  - {fileID: 11400000, guid: 5573e25e3fa54504ea85d8d0d5aa71e5, type: 2}
-  - {fileID: 11400000, guid: 1d0b35f77c646904ca95ce4666e19cc8, type: 2}
-  - {fileID: 11400000, guid: 06fb610b23df22244b30b74698a2b78c, type: 2}
-  - {fileID: 11400000, guid: 9c6be0558143b1a42aebd38a1edd63b8, type: 2}
-  - {fileID: 11400000, guid: 7627303ac941fba4280b3c2473d0d1b9, type: 2}
   ActiveWaveIndex: 0
   NumCustomersServed: 0
   RecipesInTray: []
@@ -6628,17 +6608,16 @@ MonoBehaviour:
   TrayInHand: 0
   TrayInOven: 0
   DrinksInHand: 0
-  OrderInHand: 
+  OrdersInHand: []
   TraySprite: {fileID: 341196457}
-  DrinksSprite: {fileID: 175487071}
-  PlateSprite: {fileID: 1087339204}
-  DrinkSprite: {fileID: 763120199}
-  FoodSprite: {fileID: 690865187}
+  CoffeeMakerSprite: {fileID: 175487071}
+  PlateImage: {fileID: 7759271183815423412, guid: 18795f1e59c20804c91f72dff27c5033, type: 3}
+  PlateParentCanvas: {fileID: 1242437940}
   TotalCustomerScore: 0
   CustomersAreFrozen: 0
   DitherShader: {fileID: -822207758123213011, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
   TutorialNoises: {fileID: 1152092002}
-  FirstCustomerServed: 0
+  FirstCustomerServed: 1
 --- !u!114 &1152092002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6774,6 +6753,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc7ca6df2e84bc4e997f01129a3a022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1242437940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4509411023830745860, guid: 4555b626fca9cb3419882983c5a35773, type: 3}
+  m_PrefabInstance: {fileID: 1679737934360032367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331345451
 GameObject:
   m_ObjectHideFlags: 0

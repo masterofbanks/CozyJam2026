@@ -113,7 +113,6 @@ public class ServingMinigameLogic : MonoBehaviour
             FoodButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = foodName;
             FoodButton.gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetFoodImageFromName(foodName);
             FoodButton.gameObject.SetActive(true);
-            GameManager.Instance.SetFoodInPlateSprite(foodName);
             currentFood = foodName;
             TrayButtons[indexOfButton].gameObject.SetActive(false);
         }
@@ -138,7 +137,6 @@ public class ServingMinigameLogic : MonoBehaviour
             numberOfDrinks--;
             UpdateCoffeeContents();
             DrinksButton.gameObject.SetActive(true);
-            GameManager.Instance.DrinkSprite.SetActive(true);
 
         }
 
@@ -152,23 +150,23 @@ public class ServingMinigameLogic : MonoBehaviour
         UpdateCoffeeContents();
         DrinksButton.gameObject.SetActive(false);
         currentDrink = null;
-        GameManager.Instance.DrinkSprite.SetActive(false);
     }
 
     public void ServePlate()
     {
         if (!SoundManager.TutorialIsPlaying())
         {
-            UIManager.Instance.SendBackToCatCamera(Cam);
+            //UIManager.Instance.SendBackToCatCamera(Cam);
             if (FoodButton.gameObject.activeSelf || DrinksButton.gameObject.activeSelf)
             {
                 if (currentTrayIndex != -1 && FoodButton.gameObject.activeSelf)
                 {
                     GameManager.Instance.RecipesInTray[currentTrayIndex] = null;
+                    FoodButton.gameObject.SetActive(false);
+                    DrinksButton.gameObject.SetActive(false);
                     //currentTrayIndex = -1;
                 }
-                finalOrder = $"{currentDrink}-{currentFood}";
-                GameManager.Instance.PutPlateInHand(finalOrder);
+                GameManager.Instance.AddPlateInHand(currentFood, currentDrink);
                 if (!GameManager.Instance.FirstCustomerServed)
                 {
                     Debug.Log("Tring to play walking tutorial!");
@@ -177,22 +175,24 @@ public class ServingMinigameLogic : MonoBehaviour
                 }
 
 
-                //DrinksButton.gameObject.SetActive(false);
-                //FoodButton.gameObject.SetActive(false);
+                
 
             }
             else
             {
-                GameManager.Instance.CleanOutPlateInHand();
+                //GameManager.Instance.CleanOutPlateInHand();
             }
         }
         
+    }
 
-
-
-
-
-
+    public void LeaveMinigame()
+    {
+        if (!SoundManager.TutorialIsPlaying())
+        {
+            UIManager.Instance.SendBackToCatCamera(Cam);
+            
+        }
     }
 
     

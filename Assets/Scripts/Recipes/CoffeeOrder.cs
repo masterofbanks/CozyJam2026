@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "CoffeeOrder", menuName = "Scriptable Objects/CoffeeOrder")]
+[System.Serializable]
 public class CoffeeOrder : ScriptableObject
 {
     public string Type;

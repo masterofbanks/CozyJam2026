@@ -11,9 +11,11 @@ public class CustomerBehavior : MonoBehaviour
     public PlayerInput.Directions CurrentDirection = PlayerInput.Directions.Down;
 
     [Header("Ordering")]
+    public string CustomerName;
     public string Order;//{ get; private set; }
     public int ID = -1;
     public TextMeshProUGUI IDText;
+    public TextMeshProUGUI NameTextBox;
 
     [Header("Rating System")]
     public int MaxHappinessRating = 80;
@@ -136,6 +138,17 @@ public class CustomerBehavior : MonoBehaviour
         Order = order;
         ID = id;
         IDText.text = id.ToString();
+        NameTextBox.text = "";
+    }
+
+    public void GiveOrder(CustomerPreset preset, int id)
+    {
+        Order = preset.GetOrder();
+        CustomerName = preset.CustomerName;
+        ID = id;
+        IDText.text = id.ToString();
+        anime.runtimeAnimatorController = anims.GetCharacterController(preset.AppearanceIndex);
+        NameTextBox.text = CustomerName;
     }
 
     public void InProximityOfSittingCustomer()

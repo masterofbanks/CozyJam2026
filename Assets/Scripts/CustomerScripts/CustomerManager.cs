@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using System.Linq;
 using UnityEngine.Rendering;
+using System;
+using System.IO;
 public class CustomerManager : MonoBehaviour
 {
     public static CustomerManager Instance;
@@ -21,6 +23,7 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private List<CoffeeOrder> CoffeeOrderTypes = new();
     [SerializeField] private List<Recipe> FoodOrderTypes = new();
     public CustomerBehavior CurrentCustomer = null;
+    private CustomerPreset[] _customerPresets;
 
     private System.Random _random = new System.Random();    
     private void Awake()
@@ -37,6 +40,36 @@ public class CustomerManager : MonoBehaviour
 
         _seatScripts = Seats.gameObject.GetComponentsInChildren<SeatBehavior>();
         _random = new System.Random();
+
+        //Find All Customer Presets and Load them Into the _customerPresets array
+        _customerPresets = Resources.LoadAll<CustomerPreset>("ExistingCustomers");
+        if(_customerPresets != null)
+        {
+            Debug.Log($"Loaded {_customerPresets.Length} customer presets.");
+            if(_customerPresets.Length == 0)
+            {
+                Debug.LogWarning("No customer presets found in Resources/ExistingCustomers!");
+            }
+
+            else
+            {
+                Debug.Log("Customers Found!");
+            }
+        }
+
+
+    }
+
+    void CreateTestOrders()
+    {
+        string testOrder = "";
+
+        for (int i = 0; i < 1000; i++)
+        {
+            testOrder += CreateCustomerOrder() + Environment.NewLine;
+            testOrder += "------------------------" + Environment.NewLine;
+        }
+        File.WriteAllText(Application.dataPath + "/Resources/CustomerOrders.txt", testOrder);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -78,11 +111,21 @@ public class CustomerManager : MonoBehaviour
         }
     }
 
-    public void SpawnCustomer()
+    public void SpawnCustomer(bool isCustomerPreset = false)
     {
         GameObject customerClone = Instantiate(CustomerPrefab, CustomerSpawnPos.position, Quaternion.identity);
         numCustomers++;
-        customerClone.GetComponent<CustomerBehavior>().GiveOrder(CreateCustomerOrder(), numCustomers);
+        if(isCustomerPreset)
+        {
+            int randIndex = _random.Next(0, _customerPresets.Length);
+            CustomerPreset preset = _customerPresets[randIndex];
+            customerClone.GetComponent<CustomerBehavior>().GiveOrder(preset, numCustomers); 
+        }
+
+        else
+        {
+            customerClone.GetComponent<CustomerBehavior>().GiveOrder(CreateCustomerOrder(), numCustomers);
+        }
         CustomersInLine.Enqueue(customerClone.GetComponent<CustomerBehavior>());
         Debug.Log(CustomersInLine.Count);
 
