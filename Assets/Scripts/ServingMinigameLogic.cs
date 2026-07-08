@@ -38,7 +38,7 @@ public class ServingMinigameLogic : MonoBehaviour
         string[] arrayOfTrayContents = GameManager.Instance.RecipesInTray;
         if (GameManager.Instance.TrayIsCooked)
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < GameManager.Instance.RecipesInTray.Length; i++)
             {
                 if (!string.IsNullOrEmpty(arrayOfTrayContents[i]))
                 {
@@ -191,7 +191,8 @@ public class ServingMinigameLogic : MonoBehaviour
         if (!SoundManager.TutorialIsPlaying())
         {
             UIManager.Instance.SendBackToCatCamera(Cam);
-            
+            FoodButton.gameObject.SetActive(false);
+
         }
     }
 

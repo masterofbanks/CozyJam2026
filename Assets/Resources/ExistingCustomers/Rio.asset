@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerName: Rio
   CoffeeType: Colombian
-  NumSugar: 1
-  NumMilk: 1
+  NumSugar: 0
+  NumMilk: 0
   FoodType: Pie
   AppearanceIndex: 2

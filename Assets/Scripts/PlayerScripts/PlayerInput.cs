@@ -73,6 +73,12 @@ public class PlayerInput : MonoBehaviour
             rb2D.linearVelocity = _directionalInput * moveSpeed;
         }
 
+        else
+        {
+            CurrentDirection = _animCat.UpdateDirectionState(Vector2.zero);
+            _isMoving = false;
+        }
+
 
     }
 

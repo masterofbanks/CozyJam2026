@@ -15,6 +15,6 @@ MonoBehaviour:
   CustomerName: Ethan
   CoffeeType: French
   NumSugar: 0
-  NumMilk: 1
+  NumMilk: 0
   FoodType: Toast
   AppearanceIndex: 3

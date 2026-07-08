@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        RecipesInTray = new string[4];
+        RecipesInTray = new string[8];
         TrayIsCooked = false;
         if(TutorialNoises != null)
         {

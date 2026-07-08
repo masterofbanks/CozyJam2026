@@ -142,7 +142,7 @@ public class MixingMinigameLogic : MonoBehaviour
     {
         ClearCurrentRecipe();
         int firstOpenSlotInTray = FindFirstOpenSlot();
-        if (firstOpenSlotInTray == -1 || firstOpenSlotInTray >= 4)
+        if (firstOpenSlotInTray == -1 || firstOpenSlotInTray >= _cannisters.Count)
         {
             Debug.Log("openSlot index out of range look here!!!");
         }
