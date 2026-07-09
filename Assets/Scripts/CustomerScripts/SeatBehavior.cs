@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SeatBehavior : MonoBehaviour
 {
-    public bool Occupied { get; private set; }
+    public bool Occupied;
     public void OccupySeat()
     {
         Occupied = true;

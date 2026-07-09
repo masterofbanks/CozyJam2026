@@ -6,7 +6,7 @@ public class ServingInteractable : MinigameInteractable
     {
         UI?.SetActive(true);
         UIManager.Instance.CurrentMinigameUI = UI;
-        Debug.Log("Setting up Mixing Minigame");
+        Debug.Log("Setting up Serving Minigame");
     }
 
     public override void Interact()

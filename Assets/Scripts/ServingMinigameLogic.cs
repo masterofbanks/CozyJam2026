@@ -52,13 +52,22 @@ public class ServingMinigameLogic : MonoBehaviour
                 else
                 {
                     TrayButtons[i].gameObject.SetActive(false);
+                    Debug.LogWarning($"Tray button {i} is empty.");
                 }
 
             }
         }
-        
 
-        numberOfDrinks = GameManager.Instance.DrinksContents.Item2;
+        else
+        {
+            for(int i = 0; i < TrayButtons.Count; i++)
+            {
+                TrayButtons[i].gameObject.SetActive(false);
+            }
+        }
+
+
+            numberOfDrinks = GameManager.Instance.DrinksContents.Item2;
         contentsOfDrink = GameManager.Instance.DrinksContents.Item1;
 
         UpdateCoffeeContents();
@@ -157,7 +166,7 @@ public class ServingMinigameLogic : MonoBehaviour
         if (!SoundManager.TutorialIsPlaying())
         {
             //UIManager.Instance.SendBackToCatCamera(Cam);
-            if (FoodButton.gameObject.activeSelf || DrinksButton.gameObject.activeSelf)
+            if (FoodButton.gameObject.activeSelf && DrinksButton.gameObject.activeSelf)
             {
                 if (currentTrayIndex != -1 && FoodButton.gameObject.activeSelf)
                 {

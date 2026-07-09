@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Level1Wave
   m_EditorClassIdentifier: 
   waves:
-  - TimeOfAppearance: 1
+  - TimeOfAppearance: 0
     IsPreset: 0
+    IsRushWave: 0
   - TimeOfAppearance: 1
     IsPreset: 1
-  - TimeOfAppearance: 1
+    IsRushWave: 0
+  - TimeOfAppearance: 2
     IsPreset: 0
-  - TimeOfAppearance: 1
+    IsRushWave: 0
+  - TimeOfAppearance: 3
     IsPreset: 0
-  - TimeOfAppearance: 1
+    IsRushWave: 0
+  - TimeOfAppearance: 3
     IsPreset: 0
-  - TimeOfAppearance: 1
-    IsPreset: 0
-  - TimeOfAppearance: 1
-    IsPreset: 0
+    IsRushWave: 1

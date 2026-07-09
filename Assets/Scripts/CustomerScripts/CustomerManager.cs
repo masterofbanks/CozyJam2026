@@ -9,7 +9,7 @@ public class CustomerManager : MonoBehaviour
 {
     public static CustomerManager Instance;
     [Header("Waiting Areas")]
-    public Transform WaitingArea;
+    public Transform[] WaitingAreas;
     public Transform OrderingArea;
     public Transform LeavingArea;
     [SerializeField] private Transform Seats;
@@ -90,7 +90,7 @@ public class CustomerManager : MonoBehaviour
 
     public void TakeCustomerOrder()
     {
-        if(CurrentCustomer != null)
+        if(CurrentCustomer != null && GetPositionOfFreeSeat() != null)
         {
             CurrentCustomer.TakeOrder();
             UIManager.Instance.AddOrderToUI(CurrentCustomer.Order, CurrentCustomer.ID);
@@ -100,6 +100,25 @@ public class CustomerManager : MonoBehaviour
             {
                 CustomerBehavior newCustomerAtFront = CustomersInLine.Peek();
                 newCustomerAtFront.AimCustomerAtTransform(CustomerManager.Instance.OrderingArea);
+                for(int i = 1; i < CustomersInLine.Count; i++)
+                {
+                    CustomerBehavior customer = CustomersInLine.ElementAt(i);
+                    if (customer != null)
+                    {
+                        customer.CurrentWaitingIndex = i;
+                        customer.AimCustomerAtTransform(WaitingAreas[i-1]);
+                    }
+                }   
+                int indexOfFreeSeat = FirstFreeWaitingArea();
+                if(indexOfFreeSeat > 0)
+                {
+                    WaitingAreas[indexOfFreeSeat - 1].GetComponent<WaitingAreaBehavior>().hasCustomerInArea = false;
+                }
+                else
+                {
+                    WaitingAreas[WaitingAreas.Length - 1].GetComponent<WaitingAreaBehavior>().hasCustomerInArea = false;
+                }
+                
             }
             Debug.Log(CustomersInLine.Count);
 
@@ -137,7 +156,6 @@ public class CustomerManager : MonoBehaviour
         {
             if (!_seatScripts[i].Occupied)
             {
-                _seatScripts[i].OccupySeat();
                 return _seatScripts[i];
             }
         }
@@ -171,6 +189,30 @@ public class CustomerManager : MonoBehaviour
         {
             seat.DeoccupySeat();
         }
+    }
+
+    public int FirstFreeWaitingArea()
+    {
+        for(int i = 0; i < WaitingAreas.Length; i++)
+        {
+            if(!WaitingAreas[i].gameObject.GetComponent<WaitingAreaBehavior>().hasCustomerInArea)
+            {
+                return i;
+            }
+        }
+
+        Debug.Log("No free waiting areas found!");
+        return -1;
+    }
+
+    public WaitingAreaBehavior GetWaitingAreaBehavior(int index)
+    {
+        if(index >= 0 && index < WaitingAreas.Length)
+        {
+            return WaitingAreas[index].gameObject.GetComponent<WaitingAreaBehavior>();
+        }
+        Debug.LogWarning($"Index {index} is out of bounds for WaitingAreas.");
+        return null;
     }
 
 }

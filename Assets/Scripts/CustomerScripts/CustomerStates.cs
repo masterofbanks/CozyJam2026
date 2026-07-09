@@ -19,7 +19,16 @@ public class CustomerStartState : I_CustomerState
     {
         if (GameManager.Instance.CustomerAtOrderArea)
         {
-            behaviorScript.AimCustomerAtTransform(CustomerManager.Instance.WaitingArea);
+            behaviorScript.CurrentWaitingIndex = CustomerManager.Instance.FirstFreeWaitingArea();
+            if(behaviorScript.CurrentWaitingIndex == -1)
+            {
+                Debug.LogWarning("No free waiting area found for customer.");
+                behaviorScript.AimCustomerAtTransform(behaviorScript.transform);
+                return;
+            }
+            WaitingAreaBehavior waitingArea = CustomerManager.Instance.GetWaitingAreaBehavior(behaviorScript.CurrentWaitingIndex);
+            behaviorScript.AimCustomerAtTransform(waitingArea.transform);
+            waitingArea.hasCustomerInArea = true;
         }
 
         else
@@ -61,10 +70,7 @@ public class WaitForFoodState : I_CustomerState
     public void Enter()
     {
         SeatBehavior newPosition = CustomerManager.Instance.GetPositionOfFreeSeat();
-        if(newPosition == null)
-        {
-            return;
-        }
+        newPosition.OccupySeat();
         behaviorScript.AimCustomerAtTransform(newPosition.transform);
         behaviorScript.Seat = newPosition;
         GameManager.Instance.EndOrderSequence();
@@ -98,6 +104,7 @@ public class LeavingState : I_CustomerState
     {
         behaviorScript.agent.updatePosition = true;
         behaviorScript.AimCustomerAtTransform(CustomerManager.Instance.LeavingArea);
+        behaviorScript.Seat.DeoccupySeat();
     }
 
     public void Update()

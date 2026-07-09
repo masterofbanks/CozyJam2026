@@ -9,6 +9,7 @@ public class Wave : ScriptableObject
     {
         public int TimeOfAppearance;
         public bool IsPreset;
+        public bool IsRushWave;
     }
 
     public List<CustomerType> waves = new List<CustomerType>();

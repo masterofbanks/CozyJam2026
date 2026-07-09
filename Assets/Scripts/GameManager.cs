@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public FullScreenPassRendererFeature DitherShader;
     public SoundManager TutorialNoises;
     public bool FirstCustomerServed = false;
+    [SerializeField] private int RushWaveCustomerCount = 16;
     private List<float> _waveScores = new();
 
     public event Action ServedOrderDrinksAction;
@@ -126,11 +127,35 @@ public class GameManager : MonoBehaviour
             _t += Time.deltaTime;
             if (_t > CurrentWave.waves[CurrentIndexOfWave].TimeOfAppearance)
             {
-                CustomerManager.Instance.SpawnCustomer(CurrentWave.waves[CurrentIndexOfWave].IsPreset);
+                if (CurrentWave.waves[CurrentIndexOfWave].IsRushWave)
+                {
+                    SpawnRushWave(RushWaveCustomerCount);
+                }
+
+                else
+                {
+                    CustomerManager.Instance.SpawnCustomer(CurrentWave.waves[CurrentIndexOfWave].IsPreset);
+                }
                 CurrentIndexOfWave++;
             }
         }
         
+    }
+
+    public void SpawnRushWave(int amountOfCustomers)
+    {
+        StartCoroutine(SpawnRushWaveRoutine(0, 1.0f, amountOfCustomers));
+    }
+    public IEnumerator SpawnRushWaveRoutine(int currentAmountOfCustomers, float interval, int maxAmountOfCustomers)
+    {
+        if(currentAmountOfCustomers < maxAmountOfCustomers)
+        {
+            CustomerManager.Instance.SpawnCustomer();
+            yield return new WaitForSeconds(interval);
+            StartCoroutine(SpawnRushWaveRoutine(currentAmountOfCustomers + 1, interval, maxAmountOfCustomers)); 
+        }
+
+
     }
 
 

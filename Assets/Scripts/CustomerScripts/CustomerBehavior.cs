@@ -17,6 +17,7 @@ public class CustomerBehavior : MonoBehaviour
     public TextMeshProUGUI IDText;
     public TextMeshProUGUI NameTextBox;
     private float _timeAlive = 0f;
+    public int CurrentWaitingIndex = -1;
 
     [Header("Rating System")]
     public int MaxHappinessRating = 80;
@@ -203,7 +204,6 @@ public class CustomerBehavior : MonoBehaviour
         if(CanDecreaseRating())
         {
             CurrentRating -= DecreaseScaling * deltaTime;
-            Debug.Log("hi");
 
         }
 
