@@ -44,11 +44,14 @@ public class GameManager : MonoBehaviour
     public float TotalCustomerScore = 0;
     public bool CustomerAtOrderArea { get; private set; } = false;
     public bool CustomersAreFrozen = false;
-    public FullScreenPassRendererFeature DitherShader;
     public SoundManager TutorialNoises;
     public bool FirstCustomerServed = false;
-    [SerializeField] private int RushWaveCustomerCount = 16;
+    public int RushWaveCustomerCount = 16;
     private List<float> _waveScores = new();
+
+    [Header("Rush Effects")]
+    public FullScreenPassRendererFeature DitherShader;
+
 
     public event Action ServedOrderDrinksAction;
     public event Action ServedOrderFoodAction;
@@ -99,6 +102,8 @@ public class GameManager : MonoBehaviour
             DrinkTypes.Add("Colombian", drinkImageArray[0]);
             
         }
+
+        RemoveRushEffects();
     }
 
     private void Start()
@@ -144,6 +149,7 @@ public class GameManager : MonoBehaviour
 
     public void SpawnRushWave(int amountOfCustomers)
     {
+        ApplyRushEffects();
         StartCoroutine(SpawnRushWaveRoutine(0, 1.0f, amountOfCustomers));
     }
     public IEnumerator SpawnRushWaveRoutine(int currentAmountOfCustomers, float interval, int maxAmountOfCustomers)
@@ -314,7 +320,7 @@ public class GameManager : MonoBehaviour
 
     public bool AllCustomersServed()
     {
-        return NumCustomersServed >= CurrentWave.waves.Count;
+        return NumCustomersServed >= CurrentWave.NumberOfCustomersInWave();
     }
 
     public void LoadNextLevel()
@@ -336,6 +342,7 @@ public class GameManager : MonoBehaviour
     public void StartNextLevel() 
     {
         ActiveWaveIndex++;
+        RemoveRushEffects();
         StartCoroutine(StartSequenceOfNextLevel());
 
 
@@ -413,17 +420,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetFoodInPlateSprite(string name)
+    public void ApplyRushEffects()
     {
-        //FoodSprite.gameObject.SetActive(true);
-       // FoodSprite.GetComponent<SpriteRenderer>().sprite = GetFoodImageFromName(name);
+        DitherShader.SetActive(true);
+        MusicManager.Instance.PlayRushMusic();
     }
 
-    public void RemoveFoodInPlate()
+    private void RemoveRushEffects()
     {
-        //FoodSprite.gameObject?.SetActive(false);
-        //GetComponent<SpriteRenderer>().sprite = null;
+        DitherShader.SetActive(false);
+        MusicManager.Instance.PlayNormalMusic();
     }
 
-   
+    private void OnDestroy()
+    {
+        DitherShader.SetActive(false);
+    }
+
 }

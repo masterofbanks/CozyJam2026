@@ -134,7 +134,6 @@ public class ServingMinigameLogic : MonoBehaviour
             TrayButtons[currentTrayIndex].gameObject.SetActive(true);
             FoodButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Empty";
             FoodButton.gameObject.SetActive(false);
-            GameManager.Instance.RemoveFoodInPlate();
             currentFood = null;
         }
     }
@@ -227,6 +226,8 @@ public class ServingMinigameLogic : MonoBehaviour
             TrayButtons[i].gameObject.SetActive(false);
         }
     }
+
+    
 
 }
 

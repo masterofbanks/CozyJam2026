@@ -13,4 +13,22 @@ public class Wave : ScriptableObject
     }
 
     public List<CustomerType> waves = new List<CustomerType>();
+    public int NumberOfCustomersInWave()
+    {
+        int answer = 0;
+        for(int i = 0; i < waves.Count; i++)
+        {
+            if (waves[i].IsRushWave)
+            {
+                answer += GameManager.Instance.RushWaveCustomerCount;
+            }
+
+            else
+            {
+                answer++;
+            }
+        }
+
+        return answer;
+    }
 }
