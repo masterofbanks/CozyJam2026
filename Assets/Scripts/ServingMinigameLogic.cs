@@ -14,6 +14,8 @@ public class ServingMinigameLogic : MonoBehaviour
     [SerializeField] private Button DrinksButton;
     [SerializeField] private TextMeshProUGUI CoffeeContentsText;
     [SerializeField] private GameObject Cam;
+    [SerializeField] private Transform ServedPlateParent;
+    [SerializeField] private GameObject ServedPlateButtonPrefab;
 
     private int currentTrayIndex = -1;
     private string currentFood;
@@ -28,6 +30,7 @@ public class ServingMinigameLogic : MonoBehaviour
         GameManager.Instance.ServedOrderAction += ClearStuffs;
         GameManager.Instance.ServedOrderDrinksAction += ClearDrinks;
         GameManager.Instance.ServedOrderFoodAction += ClearTrayButtons;
+        GameManager.Instance.RemovedOrderAction += UpdateServedPlateUI;
 
     }
     private void Start()
@@ -52,7 +55,6 @@ public class ServingMinigameLogic : MonoBehaviour
                 else
                 {
                     TrayButtons[i].gameObject.SetActive(false);
-                    Debug.LogWarning($"Tray button {i} is empty.");
                 }
 
             }
@@ -71,6 +73,7 @@ public class ServingMinigameLogic : MonoBehaviour
         contentsOfDrink = GameManager.Instance.DrinksContents.Item1;
 
         UpdateCoffeeContents();
+        UpdateServedPlateUI();
     }
 
     private void UpdateCoffeeContents()
@@ -94,18 +97,7 @@ public class ServingMinigameLogic : MonoBehaviour
 
     private void OnDisable()
     {
-        /*string[] arrayOfTrayContents = GameManager.Instance.RecipesInTray;
-        if (GameManager.Instance.TrayIsCooked)
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                TrayButtons[i].gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "";
-                TrayButtons[i].gameObject.SetActive(false);
-            }
-        }
-        
-
-        CoffeeContentsText.text = "";*/
+       
     }
 
     public void SubmitFoodItem()
@@ -160,13 +152,18 @@ public class ServingMinigameLogic : MonoBehaviour
         currentDrink = null;
     }
 
+    /// <summary>
+    /// This method is called by the Serve Button within the minigame UI. 
+    /// If we have a food item and drink item active within the current plate, we add the plate to the inventory of the player and display that plate within the served items UI Grid Layout Group
+    /// </summary>
     public void ServePlate()
     {
         if (!SoundManager.TutorialIsPlaying())
         {
-            //UIManager.Instance.SendBackToCatCamera(Cam);
+            //check if there is a food item and drink item on the plate
             if (FoodButton.gameObject.activeSelf && DrinksButton.gameObject.activeSelf)
             {
+                //on serving, remove the food item from the tray and remove both the food item and the drinks item from the plate
                 if (currentTrayIndex != -1 && FoodButton.gameObject.activeSelf)
                 {
                     GameManager.Instance.RecipesInTray[currentTrayIndex] = null;
@@ -175,9 +172,14 @@ public class ServingMinigameLogic : MonoBehaviour
                     //currentTrayIndex = -1;
                 }
                 GameManager.Instance.AddPlateInHand(currentFood, currentDrink);
+
+                //Update the plate to the served items UI grid layout group
+                UpdateServedPlateUI();
+                GameManager.Instance.ClearFoodValues();
+                GameManager.Instance.ClearDrinkValues();
+
                 if (!GameManager.Instance.FirstCustomerServed)
                 {
-                    Debug.Log("Tring to play walking tutorial!");
                     SoundManager.PlaySound(SoundType.Walking);
 
                 }
@@ -186,14 +188,33 @@ public class ServingMinigameLogic : MonoBehaviour
                 
 
             }
-            else
-            {
-                //GameManager.Instance.CleanOutPlateInHand();
-            }
+            
         }
         
     }
 
+    /// <summary>
+    /// Look at the current inventory of served plates within the game manager, and display their information to the served items UI grid layout group. 
+    /// </summary>
+    private void UpdateServedPlateUI()
+    {
+        //clear out old served plate UI
+        foreach(Transform child in ServedPlateParent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        //add in a new served plate button for each plate in the inventory of plates in the game manager;
+        for(int i = 0; i < GameManager.Instance.OrdersInHand.Count; i++)
+        {
+            Tuple<string, string> order = GameManager.Instance.OrdersInHand[i];
+            GameObject newPlateButton = Instantiate(ServedPlateButtonPrefab, ServedPlateParent);
+            newPlateButton.GetComponent<PlateBehavior>().SetUpImagesWithinPlate(order.Item1, order.Item2, i);
+        }
+
+    }
+
+    
     public void LeaveMinigame()
     {
         if (!SoundManager.TutorialIsPlaying())

@@ -6151,7 +6151,6 @@ GameObject:
   - component: {fileID: 328206179}
   - component: {fileID: 328206182}
   - component: {fileID: 328206180}
-  - component: {fileID: 328206181}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -6186,105 +6185,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a011f87060d1eb447a847c9fef65002c, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.227
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!82 &328206181
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328206178}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b755c87863138c94199a058be5dd3dc5, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0
+  m_PlayOnAwake: 0
+  m_Volume: 0.184
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6381,6 +6283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RecordScratchSFX: {fileID: 7871274252421988067, guid: c131a749021a52b438b11381f317f647, type: 3}
+  NormalMusic: {fileID: 8300000, guid: a011f87060d1eb447a847c9fef65002c, type: 3}
+  RushMusic: {fileID: 8300000, guid: b755c87863138c94199a058be5dd3dc5, type: 3}
 --- !u!1001 &333375350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13263,8 +13167,7 @@ MonoBehaviour:
   CurrentWave: {fileID: 0}
   CurrentIndexOfWave: 0
   AllWaves:
-  - {fileID: 11400000, guid: eadf21392b45c5643be4c0b5ab01ad10, type: 2}
-  - {fileID: 11400000, guid: 5573e25e3fa54504ea85d8d0d5aa71e5, type: 2}
+  - {fileID: 11400000, guid: 1d0b35f77c646904ca95ce4666e19cc8, type: 2}
   ActiveWaveIndex: 0
   NumCustomersServed: 0
   RecipesInTray: []
@@ -13274,7 +13177,6 @@ MonoBehaviour:
   TrayInHand: 0
   TrayInOven: 0
   DrinksInHand: 0
-  OrdersInHand: []
   TraySprite: {fileID: 341196457}
   CoffeeMakerSprite: {fileID: 175487071}
   PlateImage: {fileID: 7759271183815423412, guid: 18795f1e59c20804c91f72dff27c5033, type: 3}
@@ -21593,7 +21495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3127206201233178008, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.00008825665
       objectReference: {fileID: 0}
     - target: {fileID: 3269894892578047622, guid: 06e22e3cfd3144646b9f58792820cf57, type: 3}
       propertyPath: m_Name

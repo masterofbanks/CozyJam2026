@@ -169,7 +169,7 @@ public class CustomerBehavior : MonoBehaviour
         Debug.Log(distanceBetweenServedAndActual);
         CurrentRating -= distanceBetweenServedAndActual;
         UIManager.Instance.RemoveOrderSlip(ID);
-        GameManager.Instance.GiveFood(CurrentRating);
+        GameManager.Instance.GiveFoodToCustomer(CurrentRating);
 
 
     }

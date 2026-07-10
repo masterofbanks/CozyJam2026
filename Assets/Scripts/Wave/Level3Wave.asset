@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ed7291b063c40409c969b67d5171f5, type: 3}
   m_Name: Level3Wave
   m_EditorClassIdentifier: 
-  waves: 02000000320000003300000034000000
+  waves:
+  - TimeOfAppearance: 1
+    IsPreset: 0
+    IsRushWave: 0
+  - TimeOfAppearance: 2
+    IsPreset: 0
+    IsRushWave: 0
+  - TimeOfAppearance: 3
+    IsPreset: 0
+    IsRushWave: 0
+  - TimeOfAppearance: 4
+    IsPreset: 0
+    IsRushWave: 0

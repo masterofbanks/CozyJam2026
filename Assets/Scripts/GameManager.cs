@@ -26,8 +26,7 @@ public class GameManager : MonoBehaviour
     public bool TrayInHand; //{ get; private set; }
     public bool TrayInOven;
     public bool DrinksInHand;
-    public bool PlateInHand { get; private set; }
-    public List<string> OrdersInHand;
+    public List<Tuple<string, string>> OrdersInHand = new(); //format is drink order, food order
 
     public Tuple<Dictionary<string, int>, int> DrinksContents = new(new(), 0);
     private Dictionary<string, Sprite> RecipeImages = new();
@@ -61,6 +60,7 @@ public class GameManager : MonoBehaviour
     public event Action StartedNewLevel;
     public event Action BrewedSomeDrinks;
     public event Action MixedSomeFood;
+    public event Action RemovedOrderAction;
 
     private void Awake()
     {
@@ -223,22 +223,38 @@ public class GameManager : MonoBehaviour
         BrewedSomeDrinks?.Invoke(); 
     }
 
+    /// <summary>
+    /// Add a new order from the serving minigame to the list of orders in the player's hand. Also add a new plate to the player UI canvas to represent the order. 
+    /// </summary>
+    /// <param name="foodOrder"></param>
+    /// <param name="drinksOrder"></param>
     public void AddPlateInHand(string foodOrder, string drinksOrder)
     {
-        PlateInHand = true;
-        GameObject plate = Instantiate(PlateImage, PlateParentCanvas.transform);
-        string finalOrder = $"{drinksOrder}-{foodOrder}";
-        OrdersInHand.Add(finalOrder);
-        plate.GetComponent<PlateBehavior>().SetUpImagesWithinPlate(drinksOrder, foodOrder);
+        OrdersInHand.Add(new Tuple<string, string>(drinksOrder, foodOrder));
+        UpdateOverworldPlateUI();
+    }
+
+
+    /// <summary>
+    /// Clear out the old Plate UI in the overworld, and re add correct plate UI from the current player inventory of orders
+    /// </summary>
+    private void UpdateOverworldPlateUI()
+    {
+        for(int i = 0; i < PlateParentCanvas.transform.childCount; i++)
+        {
+            Destroy(PlateParentCanvas.transform.GetChild(i).gameObject);
+        }
+
+        for(int i = 0; i < OrdersInHand.Count; i++)
+        {
+            Tuple<string, string> order = OrdersInHand[i];
+            GameObject plate = Instantiate(PlateImage, PlateParentCanvas.transform);
+            plate.GetComponent<PlateBehavior>().SetUpImagesWithinPlate(order.Item1, order.Item2);
+        }
     }
 
    
-    public void CleanOutPlateInHand()
-    {
-        PlateInHand = false;
-        //PlateSprite.SetActive(PlateInHand);
-        //OrderInHand = null;
-    }
+    
 
     public void ChangeNumberOfDrinks(int newNumberOfDrinks)
     {
@@ -301,20 +317,40 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GiveFood(float score)
+    /// <summary>
+    /// Peform Clean up operations on the player after serving a customer, such as adding the customers score to the player's, and cleaning up UI for the served orders in hand
+    /// </summary>
+    /// <param name="score"></param>
+    public void GiveFoodToCustomer(float score)
     {
-        CleanOutPlateInHand();
         CleanUpAfterServing();
         TotalCustomerScore += score;
         NumCustomersServed++;
-        //DrinkSprite.SetActive(false);
-        //FoodSprite.SetActive(false);
+
+        //release the player from tutorial mode
         if (!FirstCustomerServed)
         {
             FirstCustomerServed = true;
         }
-        OrdersInHand.RemoveAt(0);   
-        Destroy(PlateParentCanvas.transform.GetChild(0).gameObject);
+
+        //remove the order from the inventory and update the UI
+        RemoveOrderAtIndex(0);
+
+    }
+
+    public void RemoveOrderAtIndex(int index)
+    {
+        if(index >= 0 && index < OrdersInHand.Count)
+        {
+            OrdersInHand.RemoveAt(index);
+            UpdateOverworldPlateUI();
+            RemovedOrderAction?.Invoke();
+        }
+
+        else
+        {
+            Debug.LogWarning($"{index} is out of range {OrdersInHand.Count}");
+        }
 
     }
 

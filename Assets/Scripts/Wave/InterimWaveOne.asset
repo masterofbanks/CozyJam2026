@@ -10,21 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27ed7291b063c40409c969b67d5171f5, type: 3}
-  m_Name: Level2Wave
+  m_Name: InterimWaveOne
   m_EditorClassIdentifier: 
   waves:
   - TimeOfAppearance: 1
     IsPreset: 0
     IsRushWave: 0
-  - TimeOfAppearance: 5
+  - TimeOfAppearance: 60
     IsPreset: 0
     IsRushWave: 0
-  - TimeOfAppearance: 7
+  - TimeOfAppearance: 61
     IsPreset: 0
     IsRushWave: 0
-  - TimeOfAppearance: 10
+  - TimeOfAppearance: 62
     IsPreset: 0
     IsRushWave: 0
-  - TimeOfAppearance: 11
+  - TimeOfAppearance: 63
     IsPreset: 0
-    IsRushWave: 1
+    IsRushWave: 0
+  - TimeOfAppearance: 100
+    IsPreset: 1
+    IsRushWave: 0
