@@ -28,13 +28,13 @@ public class CustomerBehavior : MonoBehaviour
     public float TimeToStartDecreasing = 140f;
 
     [Header("Character Animations")]
-    [SerializeField] private CharacterAnimations anims;
+    [SerializeField] protected CharacterAnimations anims;
     public Animator AreaAnimator;
     public Animator MoodAnimator;
-    private Animator anime;
-    private AnimateCat animCatScript;
+    protected Animator anime;
+    protected AnimateCat animCatScript;
 
-    public NavMeshAgent agent { get; private set; }
+    public NavMeshAgent agent;
     public CustomerStateMachine stateMachine;
 
     private bool isMoving;
@@ -131,27 +131,24 @@ public class CustomerBehavior : MonoBehaviour
         }
     }
 
-    public void TakeOrder()
+    public virtual void TakeOrder()
     {
         FinishedOrdering = true;
     }
 
-    public void GiveOrder(string order, int id)
+    
+
+    public virtual void GiveOrder(CustomerPreset preset, int id)
     {
-        Order = order;
+        Order = preset.GetOrder();
         ID = id;
         IDText.text = id.ToString();
         NameTextBox.text = "";
-    }
-
-    public void GiveOrder(CustomerPreset preset, int id)
-    {
-        Order = preset.GetOrder();
-        CustomerName = preset.CustomerName;
-        ID = id;
-        IDText.text = id.ToString();
-        anime.runtimeAnimatorController = anims.GetCharacterController(preset.AppearanceIndex);
+        /*CustomerName = preset.CustomerName;
         NameTextBox.text = CustomerName;
+
+
+        anime.runtimeAnimatorController = anims.GetCharacterController(preset.AppearanceIndex);*/
     }
 
     public void InProximityOfSittingCustomer()
@@ -174,14 +171,14 @@ public class CustomerBehavior : MonoBehaviour
 
     }
 
-    private void FreezeCustomer()
+    protected void FreezeCustomer()
     {
         oldUpdatePosition = agent.updatePosition;
         agent.updatePosition = false;
         agent.enabled = false;  
     }
 
-    private void UnfreezeCustomer()
+    protected void UnfreezeCustomer()
     {
         agent.updatePosition = oldUpdatePosition;
         agent.enabled = true;

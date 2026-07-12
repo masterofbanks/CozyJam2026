@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfff352ae0aea824ca732288f36d278f, type: 3}
-  m_Name: Ziad
+  m_Name: Rando
   m_EditorClassIdentifier: 
-  CustomerName: Ziad
-  CoffeeType: Colombian
+  CustomerName: 
+  CoffeeType: French
   NumSugar: 0
   NumMilk: 0
-  FoodType: Croissant
-  AppearanceIndex: 1
+  FoodType: Cake
+  AppearanceIndex: 0
   items: {fileID: 11400000, guid: 0dcd18af6d80853438c046cba4948656, type: 2}

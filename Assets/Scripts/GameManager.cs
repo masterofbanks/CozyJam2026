@@ -11,9 +11,9 @@ public class GameManager : MonoBehaviour
     public bool InMinigame {get; private set;}
 
     [Header("Wave Settings")]
-    [SerializeField] private Wave CurrentWave;
+    [SerializeField] private Day CurrentWave;
     [SerializeField] private int CurrentIndexOfWave = 0;
-    [SerializeField] private List<Wave> AllWaves;
+    [SerializeField] private List<Day> AllWaves;
     [SerializeField] private int ActiveWaveIndex = 0;
     public int NumCustomersServed = 0;
     private float _t;
@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
 
                 else
                 {
-                    CustomerManager.Instance.SpawnCustomer(CurrentWave.waves[CurrentIndexOfWave].IsPreset);
+                    CustomerManager.Instance.SpawnCustomer(CurrentWave.waves[CurrentIndexOfWave].Customer);
                 }
                 CurrentIndexOfWave++;
             }
@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
     {
         if(currentAmountOfCustomers < maxAmountOfCustomers)
         {
-            CustomerManager.Instance.SpawnCustomer();
+            CustomerManager.Instance.SpawnCustomer(null);
             yield return new WaitForSeconds(interval);
             StartCoroutine(SpawnRushWaveRoutine(currentAmountOfCustomers + 1, interval, maxAmountOfCustomers)); 
         }

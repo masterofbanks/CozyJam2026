@@ -1,18 +1,18 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
-[CreateAssetMenu(fileName = "Wave", menuName = "Scriptable Objects/Wave")]
-public class Wave : ScriptableObject
+[CreateAssetMenu(fileName = "Day", menuName = "Scriptable Objects/Day")]
+public class Day : ScriptableObject
 {
     [Serializable]
-    public class CustomerType
+    public class WaveType
     {
         public int TimeOfAppearance;
-        public bool IsPreset;
+        public CustomerPreset Customer;
         public bool IsRushWave;
     }
 
-    public List<CustomerType> waves = new List<CustomerType>();
+    public List<WaveType> waves = new List<WaveType>();
     public int NumberOfCustomersInWave()
     {
         int answer = 0;

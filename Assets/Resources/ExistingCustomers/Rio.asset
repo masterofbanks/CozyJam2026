@@ -18,3 +18,4 @@ MonoBehaviour:
   NumMilk: 0
   FoodType: Pie
   AppearanceIndex: 2
+  items: {fileID: 11400000, guid: 0dcd18af6d80853438c046cba4948656, type: 2}

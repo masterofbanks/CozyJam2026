@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine.Rendering;
 using System;
 using System.IO;
+using System.Runtime.CompilerServices;
 public class CustomerManager : MonoBehaviour
 {
     public static CustomerManager Instance;
@@ -20,10 +21,13 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private GameObject CustomerPrefab;
     [SerializeField] private Transform CustomerSpawnPos;
     [SerializeField] private Queue<CustomerBehavior> CustomersInLine = new();
-    [SerializeField] private List<CoffeeOrder> CoffeeOrderTypes = new();
-    [SerializeField] private List<Recipe> FoodOrderTypes = new();
     public CustomerBehavior CurrentCustomer = null;
     private CustomerPreset[] _customerPresets;
+    private CustomerPreset _randoCustomer;
+    //factory fields
+    private CustomerFactory _currentCustomerFactory;
+    private NormalCustomerFactory _normalCustomerFactory;
+    private NamedCustomerFactory _namedCustomerFactory;
 
     private System.Random _random = new System.Random();    
     private void Awake()
@@ -56,21 +60,18 @@ public class CustomerManager : MonoBehaviour
                 Debug.Log("Customers Found!");
             }
         }
-
-
-    }
-
-    void CreateTestOrders()
-    {
-        string testOrder = "";
-
-        for (int i = 0; i < 1000; i++)
+        _randoCustomer = Resources.Load<CustomerPreset>("Rando");
+        if(_randoCustomer == null)
         {
-            testOrder += CreateCustomerOrder() + Environment.NewLine;
-            testOrder += "------------------------" + Environment.NewLine;
+            Debug.LogError("Could not find the rando Customer within the resources file");
         }
-        File.WriteAllText(Application.dataPath + "/Resources/CustomerOrders.txt", testOrder);
+        _normalCustomerFactory = new NormalCustomerFactory();
+        _namedCustomerFactory = new NamedCustomerFactory();
+        _currentCustomerFactory = _normalCustomerFactory;
+
     }
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -130,23 +131,19 @@ public class CustomerManager : MonoBehaviour
         }
     }
 
-    public void SpawnCustomer(bool isCustomerPreset = false)
+    public void SpawnCustomer(CustomerPreset preset)
     {
-        GameObject customerClone = Instantiate(CustomerPrefab, CustomerSpawnPos.position, Quaternion.identity);
-        numCustomers++;
-        if(isCustomerPreset)
+        if (preset == null)
         {
-            int randIndex = _random.Next(0, _customerPresets.Length);
-            CustomerPreset preset = _customerPresets[randIndex];
-            customerClone.GetComponent<CustomerBehavior>().GiveOrder(preset, numCustomers); 
+            preset = _randoCustomer;
+            _currentCustomerFactory = _normalCustomerFactory;
         }
-
         else
         {
-            customerClone.GetComponent<CustomerBehavior>().GiveOrder(CreateCustomerOrder(), numCustomers);
+            _currentCustomerFactory = _namedCustomerFactory;
         }
+        GameObject customerClone = _currentCustomerFactory.CreateCustomer(CustomerSpawnPos.position, Quaternion.identity, preset, ++numCustomers); 
         CustomersInLine.Enqueue(customerClone.GetComponent<CustomerBehavior>());
-        Debug.Log(CustomersInLine.Count);
 
     }
 
@@ -164,18 +161,7 @@ public class CustomerManager : MonoBehaviour
 
     }
 
-    public string CreateCustomerOrder()
-    {
-        int randIndex = _random.Next(0, CoffeeOrderTypes.Count);
-        CoffeeOrder order = (CoffeeOrder)ScriptableObject.CreateInstance("CoffeeOrder");
-        order.Type = CoffeeOrderTypes[randIndex].Type;
-        order.NumMilk = 0;
-        order.NumSugar = 0;
-        string drinksOrder = order.ToString();
-        randIndex = _random.Next(0, FoodOrderTypes.Count);
-        string finalOrder = drinksOrder + $"-{FoodOrderTypes[randIndex].name}";
-        return finalOrder;
-    }
+    
 
     public bool TestForCustomersInLine()
     {
