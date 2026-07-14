@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class NamedCustomerBehavior : CustomerBehavior
 {
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -38,5 +39,9 @@ public class NamedCustomerBehavior : CustomerBehavior
     {
         Debug.Log("You have tried to take a named customer's order");
     }
-    //
+
+    public override void MoveCameraOfCustomer(OrderInteractable interactable)
+    {
+        interactable.MoveCam();
+    }
 }

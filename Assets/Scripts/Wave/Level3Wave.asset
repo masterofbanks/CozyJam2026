@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - TimeOfAppearance: 1
-    Customer: {fileID: 11400000, guid: e2aae8d02b1629247bac5bb892518e80, type: 2}
+    Customer: {fileID: 0}
     IsRushWave: 0
   - TimeOfAppearance: 2
     Customer: {fileID: 11400000, guid: f889536af65e39e4f97781bc02d987f8, type: 2}

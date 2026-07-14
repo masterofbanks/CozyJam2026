@@ -94,34 +94,8 @@ public class CustomerManager : MonoBehaviour
         if(CurrentCustomer != null && GetPositionOfFreeSeat() != null)
         {
             CurrentCustomer.TakeOrder();
-            UIManager.Instance.AddOrderToUI(CurrentCustomer.Order, CurrentCustomer.ID);
-            CurrentCustomer = null;
-            CustomersInLine.Dequeue();
-            if (CustomersInLine.Count >= 1)
-            {
-                CustomerBehavior newCustomerAtFront = CustomersInLine.Peek();
-                newCustomerAtFront.AimCustomerAtTransform(CustomerManager.Instance.OrderingArea);
-                for(int i = 1; i < CustomersInLine.Count; i++)
-                {
-                    CustomerBehavior customer = CustomersInLine.ElementAt(i);
-                    if (customer != null)
-                    {
-                        customer.CurrentWaitingIndex = i;
-                        customer.AimCustomerAtTransform(WaitingAreas[i-1]);
-                    }
-                }   
-                int indexOfFreeSeat = FirstFreeWaitingArea();
-                if(indexOfFreeSeat > 0)
-                {
-                    WaitingAreas[indexOfFreeSeat - 1].GetComponent<WaitingAreaBehavior>().hasCustomerInArea = false;
-                }
-                else
-                {
-                    WaitingAreas[WaitingAreas.Length - 1].GetComponent<WaitingAreaBehavior>().hasCustomerInArea = false;
-                }
-                
-            }
-            Debug.Log(CustomersInLine.Count);
+            //wait to do this for named
+            //CompleteCustomerOrder();
 
         }
 
@@ -131,8 +105,42 @@ public class CustomerManager : MonoBehaviour
         }
     }
 
+    public void CompleteCustomerOrder()
+    {
+        UIManager.Instance.AddOrderToUI(CurrentCustomer.Order, CurrentCustomer.ID);
+        CurrentCustomer = null;
+        CustomersInLine.Dequeue();
+        if (CustomersInLine.Count >= 1)
+        {
+            CustomerBehavior newCustomerAtFront = CustomersInLine.Peek();
+            newCustomerAtFront.AimCustomerAtTransform(OrderingArea);
+            for (int i = 1; i < CustomersInLine.Count; i++)
+            {
+                CustomerBehavior customer = CustomersInLine.ElementAt(i);
+                if (customer != null)
+                {
+                    customer.CurrentWaitingIndex = i;
+                    customer.AimCustomerAtTransform(WaitingAreas[i - 1]);
+                }
+            }
+            int indexOfFreeSeat = FirstFreeWaitingArea();
+            if (indexOfFreeSeat > 0)
+            {
+                WaitingAreas[indexOfFreeSeat - 1].GetComponent<WaitingAreaBehavior>().hasCustomerInArea = false;
+            }
+            else
+            {
+                WaitingAreas[WaitingAreas.Length - 1].GetComponent<WaitingAreaBehavior>().hasCustomerInArea = false;
+            }
+
+        }
+        Debug.Log(CustomersInLine.Count);
+    }
+
     public void SpawnCustomer(CustomerPreset preset)
     {
+        ///TODO: FIX THIS SPAWNING IN CUSTOMERS SHOULD NOT KNOW THE CONTEXT OF THE PRESET, SHOULD JUST SPAWN A CUSTOMER IN. GAME MANAGER SHOULD PERHAPS HANDLE THE TYPE OF FACTORY WE USE
+        
         if (preset == null)
         {
             preset = _randoCustomer;

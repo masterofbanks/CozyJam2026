@@ -134,8 +134,13 @@ public class CustomerBehavior : MonoBehaviour
     public virtual void TakeOrder()
     {
         FinishedOrdering = true;
+        CustomerManager.Instance.CompleteCustomerOrder();
     }
 
+    public virtual void MoveCameraOfCustomer(OrderInteractable interactable)
+    {
+        //Do Nothing since this is a normal customer
+    }
     
 
     public virtual void GiveOrder(CustomerPreset preset, int id)
