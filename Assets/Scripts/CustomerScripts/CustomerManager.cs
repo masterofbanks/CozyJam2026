@@ -78,11 +78,7 @@ public class CustomerManager : MonoBehaviour
         GameManager.Instance.StartedNewLevel += ResetCustomerManager;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void SetCurrentCustomer(CustomerBehavior currentCustomer)
     {
@@ -94,8 +90,7 @@ public class CustomerManager : MonoBehaviour
         if(CurrentCustomer != null && GetPositionOfFreeSeat() != null)
         {
             CurrentCustomer.TakeOrder();
-            //wait to do this for named
-            //CompleteCustomerOrder();
+            
 
         }
 

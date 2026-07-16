@@ -17,3 +17,4 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 754c49d36497c144699edf91bf2c1460, type: 2}
   - {fileID: 9100000, guid: 51ce11ac7172af844a7221fe193bc559, type: 2}
   - {fileID: 9100000, guid: e0061a6deed01fd47872552fd428d784, type: 2}
+  EntitySprites: []

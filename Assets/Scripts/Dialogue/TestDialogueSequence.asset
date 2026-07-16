@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f176f39f92febc94fadb478306d0a07b, type: 3}
+  m_Name: TestDialogueSequence
+  m_EditorClassIdentifier: 
+  SequenceOfLines:
+  - Hi! My name is Ziad and I like to play Magic the Gathering with my friends. I
+    would like to order some coffee and pastries please!
+  - I'll have a French Coffee with a Strudel. Thank you very much!
+  - This is some more yap!
+  - Short Sentence
+  - 'Austin really like to play Smash Brothers Ultimate with his friends in the game
+    room. This is called an MD, or microdose. '

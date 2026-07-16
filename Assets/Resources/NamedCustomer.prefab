@@ -367,6 +367,10 @@ MonoBehaviour:
   anims: {fileID: 11400000, guid: fac82d0a14a5b53459cdd9a8c326d302, type: 2}
   AreaAnimator: {fileID: 1800270734374932643}
   MoodAnimator: {fileID: 5388348687183702374}
+  agent: {fileID: 0}
+  DaysOfDialogue:
+  - {fileID: 11400000, guid: 646353e9b36e32f43b74f1365e8aac77, type: 2}
+  CurrentDayOfDialogue: 0
 --- !u!195 &2406963884926960913
 NavMeshAgent:
   m_ObjectHideFlags: 0

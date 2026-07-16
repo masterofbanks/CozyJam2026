@@ -5,10 +5,12 @@ using UnityEngine;
 public class CharacterAnimations : ScriptableObject
 {
     public List<RuntimeAnimatorController> characterAnimationControllers;
-    public RuntimeAnimatorController GetRandomCharacterController()
+    public List<Sprite> EntitySprites;
+    public RuntimeAnimatorController GetRandomCharacterController(out int indexOfCharacterAnimator)
     {
         System.Random r = new System.Random();  
         int randIndex = r.Next(0, characterAnimationControllers.Count);
+        indexOfCharacterAnimator = randIndex;
         return characterAnimationControllers[randIndex];
     }
 

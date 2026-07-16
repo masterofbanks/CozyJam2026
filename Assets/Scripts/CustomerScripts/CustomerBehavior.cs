@@ -31,8 +31,10 @@ public class CustomerBehavior : MonoBehaviour
     [SerializeField] protected CharacterAnimations anims;
     public Animator AreaAnimator;
     public Animator MoodAnimator;
+    public int AnimationID;// { get; protected set; } = 0;
     protected Animator anime;
     protected AnimateCat animCatScript;
+    
 
     public NavMeshAgent agent;
     public CustomerStateMachine stateMachine;
@@ -48,7 +50,9 @@ public class CustomerBehavior : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anime = GetComponent<Animator>();
-        anime.runtimeAnimatorController = anims.GetRandomCharacterController();
+        int temp = 0;
+        anime.runtimeAnimatorController = anims.GetRandomCharacterController(out temp);
+        AnimationID = temp;
         animCatScript = new AnimateCat(anime);
         stateMachine = new CustomerStateMachine(this);
         IDText = GetComponentInChildren<TextMeshProUGUI>();
@@ -133,6 +137,11 @@ public class CustomerBehavior : MonoBehaviour
 
     public virtual void TakeOrder()
     {
+        CompleteTakingTheCustomerOrder();
+    }
+
+    public void CompleteTakingTheCustomerOrder()
+    {
         FinishedOrdering = true;
         CustomerManager.Instance.CompleteCustomerOrder();
     }
@@ -149,11 +158,6 @@ public class CustomerBehavior : MonoBehaviour
         ID = id;
         IDText.text = id.ToString();
         NameTextBox.text = "";
-        /*CustomerName = preset.CustomerName;
-        NameTextBox.text = CustomerName;
-
-
-        anime.runtimeAnimatorController = anims.GetCharacterController(preset.AppearanceIndex);*/
     }
 
     public void InProximityOfSittingCustomer()
@@ -209,5 +213,15 @@ public class CustomerBehavior : MonoBehaviour
 
         }
 
+    }
+
+    /// <summary>
+    /// Virtual method. Returns null because normal customers cannot talk in their current iteration. Return a null reference
+    /// </summary>
+    /// <returns></returns>
+    public virtual DialogueSequence GetDialogueSequence()
+    {
+        Debug.LogWarning("GetDialogue Line was called by a normal customer. Look here to See why!!!!");
+        return null;
     }
 }
