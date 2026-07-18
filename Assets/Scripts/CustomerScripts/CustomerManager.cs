@@ -55,10 +55,6 @@ public class CustomerManager : MonoBehaviour
                 Debug.LogWarning("No customer presets found in Resources/ExistingCustomers!");
             }
 
-            else
-            {
-                Debug.Log("Customers Found!");
-            }
         }
         _randoCustomer = Resources.Load<CustomerPreset>("Rando");
         if(_randoCustomer == null)

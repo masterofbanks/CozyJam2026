@@ -105,7 +105,6 @@ public class CustomerBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("OrderingArea"))
         {
-            Debug.Log($"{gameObject.name} has hit the ordering area!");
             InOrderArea = true;
         }
 

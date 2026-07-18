@@ -112,7 +112,6 @@ public class GameManager : MonoBehaviour
         TrayIsCooked = false;
         if(TutorialNoises != null)
         {
-            Debug.Log("Hello from intro sound!");
             StartCoroutine(SmallDelay());
         }
     }
