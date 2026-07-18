@@ -20,8 +20,8 @@ MonoBehaviour:
     Customer: {fileID: 11400000, guid: f889536af65e39e4f97781bc02d987f8, type: 2}
     IsRushWave: 0
   - TimeOfAppearance: 3
-    Customer: {fileID: 0}
+    Customer: {fileID: 11400000, guid: f889536af65e39e4f97781bc02d987f8, type: 2}
     IsRushWave: 0
   - TimeOfAppearance: 4
-    Customer: {fileID: 0}
+    Customer: {fileID: 11400000, guid: f889536af65e39e4f97781bc02d987f8, type: 2}
     IsRushWave: 0

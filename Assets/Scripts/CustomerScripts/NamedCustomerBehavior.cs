@@ -5,9 +5,8 @@ using UnityEngine.AI;
 
 public class NamedCustomerBehavior : CustomerBehavior
 {
-    [Header("Named Stuff")]
-    [SerializeField] private List<DialogueSequence> DaysOfDialogue;
-    [SerializeField] private int CurrentDayOfDialogue;
+    [SerializeField]
+    private CustomerPreset Preset;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -29,13 +28,14 @@ public class NamedCustomerBehavior : CustomerBehavior
         agent.updateUpAxis = false;
         CurrentRating = MaxHappinessRating;
 
-        //TODO: FIND THE CORRECT DAYS OF DIALGOUE AND CURRENT DAY OF DIALOGUE FOR THIS NAMED CHARACTER
+        
     }
 
 
     public override void GiveOrder(CustomerPreset preset, int id)
     {
         base.GiveOrder(preset, id);
+        Preset = preset;
         CustomerName = preset.CustomerName;
         NameTextBox.text = CustomerName;
         anime = GetComponent<Animator>();
@@ -43,6 +43,9 @@ public class NamedCustomerBehavior : CustomerBehavior
         animCatScript = new AnimateCat(anime);
         stateMachine = new CustomerStateMachine(this);
         AnimationID = preset.AppearanceIndex;
+
+        //TODO: FIND THE CORRECT DAYS OF DIALGOUE AND CURRENT DAY OF DIALOGUE FOR THIS NAMED CHARACTER
+
     }
 
     public override void TakeOrder()
@@ -52,7 +55,12 @@ public class NamedCustomerBehavior : CustomerBehavior
 
     public override void MoveCameraOfCustomer(OrderInteractable interactable)
     {
-        interactable.MoveCam();
+        if (!GameManager.Instance.InMinigame)
+        {
+            GameManager.Instance.PushIntoMinigame();
+            interactable.MoveCam();
+        }
+        
     }
 
 
@@ -62,9 +70,14 @@ public class NamedCustomerBehavior : CustomerBehavior
     /// <returns>The current day's dialgoue sequence for this named customer</returns>
     public override DialogueSequence GetDialogueSequence()
     {
-        return DaysOfDialogue[CurrentDayOfDialogue];
+        return Preset.GetCurrentDayOfDialogue();
     }
 
+    public override void ProceedToNextDay()
+    {
+        Preset.ProceedToNextDayOfDialogue();
+        
+    }
 
     //TODO: Named customer's rating does not decrease while talking to the player
 }

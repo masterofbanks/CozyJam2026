@@ -223,4 +223,10 @@ public class CustomerBehavior : MonoBehaviour
         Debug.LogWarning("GetDialogue Line was called by a normal customer. Look here to See why!!!!");
         return null;
     }
+
+
+    public virtual void ProceedToNextDay()
+    {
+        //do nothing
+    }
 }

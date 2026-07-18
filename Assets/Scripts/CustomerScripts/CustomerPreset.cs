@@ -11,6 +11,8 @@ public class CustomerPreset : ScriptableObject
     public string FoodType;
     public int AppearanceIndex;
     public ItemContainer items;
+    public List<DialogueSequence> DialogueTree = new();
+    public int _currentDayIndex = 0;
 
     public string GetOrder()
     {
@@ -21,14 +23,19 @@ public class CustomerPreset : ScriptableObject
         return order.ToString() + $"-{FoodType}";
     }
 
-    public string CreateOrder()
+    public DialogueSequence GetCurrentDayOfDialogue()
     {
-        CoffeeOrder order = (CoffeeOrder)ScriptableObject.CreateInstance("CoffeeOrder");
-        order.Type = items.GetARandomCoffeeOrder();
-        order.NumMilk = 0;
-        order.NumSugar = 0;
-        string drinksOrder = order.ToString();
-        string finalOrder = drinksOrder + $"-{items.GetARandomFoodOrder()}";
-        return finalOrder;
+        return DialogueTree[_currentDayIndex];
     }
+
+    public void ProceedToNextDayOfDialogue()
+    {
+        if(_currentDayIndex < DialogueTree.Count - 1)
+        {
+            _currentDayIndex++;
+        }
+
+    }
+
+    
 }

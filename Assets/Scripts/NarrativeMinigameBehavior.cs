@@ -58,6 +58,7 @@ public class NarrativeMinigameBehavior : MonoBehaviour
 
         else
         {
+            CustomerManager.Instance.CurrentCustomer.ProceedToNextDay();
             LeaveNarrative();
             Debug.Log("Reached The end of the dialgoue sequence for the current customer");
         }

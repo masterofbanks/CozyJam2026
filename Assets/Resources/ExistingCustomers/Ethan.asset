@@ -19,3 +19,8 @@ MonoBehaviour:
   FoodType: Toast
   AppearanceIndex: 0
   items: {fileID: 11400000, guid: 0dcd18af6d80853438c046cba4948656, type: 2}
+  DialogueTree:
+  - {fileID: 11400000, guid: 8d00758d7f375994ab9076b28122108c, type: 2}
+  - {fileID: 11400000, guid: 0325e1b23fb399f42add49ee255c8c39, type: 2}
+  - {fileID: 11400000, guid: 646353e9b36e32f43b74f1365e8aac77, type: 2}
+  _currentDayIndex: 0
