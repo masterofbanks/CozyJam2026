@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Level4Wave
   m_EditorClassIdentifier: 
   waves:
-  - TimeOfAppearance: 0
-    IsPreset: 0
+  - TimeOfAppearance: 1
+    Customer: {fileID: 11400000, guid: f889536af65e39e4f97781bc02d987f8, type: 2}
+    IsRushWave: 0
+  - TimeOfAppearance: 5
+    Customer: {fileID: 11400000, guid: a16658178aec9c347901bfb23d261800, type: 2}
     IsRushWave: 0

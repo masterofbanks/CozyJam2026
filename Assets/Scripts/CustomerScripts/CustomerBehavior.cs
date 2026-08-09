@@ -1,4 +1,5 @@
 using Algorithms;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
@@ -34,6 +35,11 @@ public class CustomerBehavior : MonoBehaviour
     public int AnimationID;// { get; protected set; } = 0;
     protected Animator anime;
     protected AnimateCat animCatScript;
+
+    [Header("Utility")]
+    public float Business;
+    public float Lovesickness;
+    public float Boredom;
     
 
     public NavMeshAgent agent;
@@ -157,6 +163,9 @@ public class CustomerBehavior : MonoBehaviour
         ID = id;
         IDText.text = id.ToString();
         NameTextBox.text = "";
+        Boredom = preset.BoredomVal;
+        Business = preset.BusyVal;
+        Lovesickness = preset.LoveSickVal;
     }
 
     public void InProximityOfSittingCustomer()
@@ -229,4 +238,22 @@ public class CustomerBehavior : MonoBehaviour
     {
         //do nothing
     }
+
+    public void InitializeUtilityValues() 
+    {
+        /*Business = ;
+        Lovesickness = Random.Range(0.0f, 1.0f);
+        Boredom = 0.5f;*/
+
+    }
+
+    public void ResetCustomer()
+    {
+        HasFood = false;
+        FinishedOrdering = false;
+    }
+
+    
+
+
 }

@@ -13,7 +13,9 @@ public class CustomerPreset : ScriptableObject
     public ItemContainer items;
     public List<DialogueSequence> DialogueTree = new();
     public int _currentDayIndex = 0;
-
+    public float BoredomVal;
+    public float LoveSickVal;
+    public float BusyVal;
     public string GetOrder()
     {
         CoffeeOrder order = ScriptableObject.CreateInstance<CoffeeOrder>();

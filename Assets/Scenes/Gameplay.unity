@@ -11945,6 +11945,7 @@ MonoBehaviour:
   OrderingArea: {fileID: 456606239}
   LeavingArea: {fileID: 1791627914}
   Seats: {fileID: 205135768}
+  numCustomers: 0
   CustomerPrefab: {fileID: 4774361157023306099, guid: cce9edd70cb8d2b4ca0881d6b5e600db, type: 3}
   CustomerSpawnPos: {fileID: 816437910}
   CurrentCustomer: {fileID: 0}
@@ -13276,6 +13277,7 @@ MonoBehaviour:
   CurrentIndexOfWave: 0
   AllWaves:
   - {fileID: 11400000, guid: 1d0b35f77c646904ca95ce4666e19cc8, type: 2}
+  - {fileID: 11400000, guid: 06fb610b23df22244b30b74698a2b78c, type: 2}
   ActiveWaveIndex: 0
   NumCustomersServed: 0
   RecipesInTray: []

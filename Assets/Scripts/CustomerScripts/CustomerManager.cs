@@ -15,7 +15,7 @@ public class CustomerManager : MonoBehaviour
     public Transform LeavingArea;
     [SerializeField] private Transform Seats;
     private SeatBehavior[] _seatScripts;
-    private int numCustomers = 0;
+    public int numCustomers = 0;
 
     [Header("Customer Data")]
     [SerializeField] private GameObject CustomerPrefab;
@@ -200,4 +200,8 @@ public class CustomerManager : MonoBehaviour
         return null;
     }
 
+    public void AddCustomerToLine(CustomerBehavior customer)
+    {
+        CustomersInLine.Enqueue(customer);
+    }
 }

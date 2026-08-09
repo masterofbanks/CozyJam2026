@@ -13,6 +13,7 @@ public class CustomerStateMachine
     public CustomerStartState StartState { get; private set; } 
     public WaitForFoodState WaitingForFoodState { get; private set; }
     public LeavingState LeavingState { get; private set; }
+    public UtilityState UtilityState { get; private set; }
 
 
     // event to notify other objects of the state change
@@ -26,6 +27,7 @@ public class CustomerStateMachine
         this.StartState = new CustomerStartState(customer);
         this.WaitingForFoodState = new WaitForFoodState(customer);
         this.LeavingState = new LeavingState(customer); 
+        this.UtilityState = new UtilityState(customer);
     }
 
 
